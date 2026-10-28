@@ -22,7 +22,7 @@ npm run preview  # Serve dist/ locally
 
 ## GitHub Pages
 
-Push to `main`, then select **GitHub Actions** under **Settings > Pages > Source**. The included workflow validates, builds, and deploys the site. Pull requests only validate and build. Relative asset paths support project sites and custom domains.
+Select **GitHub Actions** under **Settings > Pages > Source**. Pushes to `master` validate, build, and deploy the site. You can also run the workflow manually on `master`. Pull requests only validate and build. Relative asset paths support project sites and custom domains.
 
 ## Data
 
