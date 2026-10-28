@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153e35">
+  <meta name="description" content="GFDM V4–V8 称号图鉴：查阅992条称号记录、解禁条件与指定曲目，支持日本語、English、中文。">
+  <title>GFDM 称号图鉴 · V4–V8</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script type="module" src="./assets/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog" data-i18n="skip">跳到称号目录</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="GFDM Title Archive"><img src="./assets/favicon.svg" alt="" width="35" height="35"><span>GFDM<span class="brand-sub">TITLE ARCHIVE</span></span></a>
+    <nav class="header-nav" aria-label="Main"><a href="#catalog" data-i18n="catalog">称号目录</a><button class="text-button" id="about-open" data-i18n="about">资料说明</button></nav>
+    <div class="languages" role="group" aria-label="Language"><button data-language="ja" lang="ja">日本語</button><button data-language="en" lang="en">EN</button><button data-language="zh" lang="zh-CN">中文</button></div>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> THE V SERIES COLLECTION <span class="edition">V4—V8</span></div>
+        <h1 id="hero-title" data-i18n="title">GFDM 称号图鉴<span class="title-dot">.</span></h1>
+      </div>
+      <div class="collection-art" aria-hidden="true"><div class="art-heading">FIVE VERSIONS.<br>ONE COLLECTION.</div><div class="version-ribs"><span>V4</span><span>V5</span><span>V6</span><span>V7</span><span>V8</span></div><div class="art-footer"><span>GF / DM</span><span>VOL. 04—08</span><span class="art-bars">▂ ▅ ▇ ▃ ▆</span></div></div>
+    </section>
+    <section class="collection-summary wrap" aria-label="Collection overview"><div><strong>992</strong><span data-i18n="entries">条称号记录</span></div><div><strong>583</strong><span data-i18n="regular">普通称号</span></div><div><strong>409</strong><span data-i18n="commemorative">纪念称号</span></div><a class="download-link" href="./downloads/gfdm-titles-ja-en-zh.xlsx" download><span class="download-icon" aria-hidden="true">↓</span><span><span data-i18n="workbook">下载条件表</span><small>XLSX</small></span><span aria-hidden="true">↗</span></a></section>
+    <section id="catalog" class="catalog wrap" aria-labelledby="catalog-title">
+      <aside class="filter-rail"><details id="filter-panel" open><summary><span data-i18n="filters">筛选目录</span><span class="filter-symbol" aria-hidden="true">☷</span></summary><div class="filter-body">
+        <fieldset><legend data-i18n="version">版本</legend><div id="version-options" class="version-options"></div></fieldset>
+        <fieldset><legend data-i18n="category">称号类别</legend><div id="kind-options" class="vertical-options"></div></fieldset>
+        <fieldset><legend data-i18n="game">适用机种</legend><div id="mode-options" class="pill-options"></div></fieldset>
+        <fieldset><legend data-i18n="review">判定状态</legend><select id="review-filter" aria-label="Review status"></select></fieldset>
+        <button class="reset-button" id="reset-filters"><span aria-hidden="true">↺</span> <span data-i18n="reset">重置筛选</span></button>
+        <div class="rail-footnote"><span class="tiny-cross">＋</span><p data-i18n="scopeNote">收录历史保留称号；部分条件仍待确认。</p></div>
+      </div></details></aside>
+      <div class="catalog-main"><div class="catalog-heading"><div><span class="section-label">EXPLORE THE COLLECTION</span><h2 id="catalog-title" data-i18n="browse">查找你的下一个称号</h2></div><span class="index-number">01 / 05</span></div>
+        <form class="search-box" role="search" id="search-form"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><label class="sr-only" for="search" data-i18n="searchLabel">搜索称号、条件或曲目</label><input type="search" id="search" placeholder="搜索称号、条件、曲名或 ID…" autocomplete="off" spellcheck="false"><kbd aria-hidden="true">/</kbd><button type="button" id="clear-search" class="icon-button" aria-label="Clear search" hidden>×</button></form>
+        <div class="results-toolbar"><p id="result-count" role="status" aria-live="polite" data-i18n="loading">正在载入称号…</p><div class="result-actions"><select id="sort" aria-label="Sort"></select><button id="export-csv" class="text-button export-button"><span aria-hidden="true">↓</span> CSV</button></div></div>
+        <div id="active-filters" class="active-filters"></div>
+        <div id="results" class="title-grid" aria-busy="true"><div class="loading-placeholder"></div><div class="loading-placeholder"></div><div class="loading-placeholder"></div><div class="loading-placeholder"></div></div>
+        <div id="empty-state" class="empty-state" hidden><span class="empty-glyph" aria-hidden="true">⌕</span><h3 data-i18n="emptyTitle">暂时没有匹配的称号</h3><p data-i18n="emptyDescription">试试更短的关键词，或放宽筛选条件。</p><button class="primary-button" id="empty-reset" data-i18n="clearAll">清除全部条件</button></div>
+        <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>GFDM <span class="footer-wordmark">TITLE ARCHIVE</span></span><a href="./data/titles.json" download>JSON ↗</a></footer>
+  <dialog id="title-dialog" class="detail-dialog" aria-labelledby="detail-name"><div class="dialog-top"><span id="detail-index" class="section-label"></span><button id="detail-close" class="icon-button close-dialog" aria-label="Close">×</button></div><div id="detail-content"></div><div class="dialog-bottom"><button id="copy-link" class="text-button"><span aria-hidden="true">↗</span> <span data-i18n="copyLink">复制称号链接</span></button><div><button id="detail-prev" class="icon-button" aria-label="Previous title">←</button><button id="detail-next" class="icon-button" aria-label="Next title">→</button></div></div></dialog>
+  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><span class="section-label">THE COLLECTION</span><button id="about-close" class="icon-button close-dialog" aria-label="Close">×</button></div><h2 id="about-title" data-i18n="about">资料说明</h2><p data-i18n="aboutIntro">本图鉴收录 GFDM V4–V8 的 992 条称号记录，包含 583 个普通称号和 409 个纪念/badge ID。</p><ul><li data-i18n="aboutNames">称号名与官方提示保持原文；语言切换只改变界面、解禁条件及判定说明。</li><li data-i18n="aboutScope">数据来自静态分析，尚未逐项验证实机取得。少量字段与旧大会条件仍待确认。</li><li data-i18n="aboutHistory">“历史保留”表示程序仍保留该称号，但未确认当前正常新授予路径。</li><li data-i18n="aboutSongs">指定曲目使用曲目 ID 与原生短名；部分短名可能截断。</li><li data-i18n="aboutServer">季节称号依赖服务器活动位，不能仅根据本机日期判断是否可得。</li></ul><div class="about-version-counts" id="about-counts"></div><a href="./downloads/gfdm-titles-ja-en-zh.xlsx" class="primary-button" download data-i18n="workbook">下载条件表</a></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript-message">此目录需要 JavaScript。JavaScript is required to browse. <a href="./downloads/gfdm-titles-ja-en-zh.xlsx">下载 / Download XLSX</a></p></noscript>
+</body>
+</html>

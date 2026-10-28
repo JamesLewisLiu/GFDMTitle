@@ -1,0 +1,993 @@
+﻿版本,类别,ID,badge数组编号,称号名（原文）,机种,解禁条件,核准状态,曲目短名,程序证据
+V4,regular,0,,新人,GF/DM,有效刷卡玩家进入称号计算即取得，无额外成绩门槛。,程序判定,,game.dll 0x10077020
+V4,regular,1,,わかば,GF/DM,当局进入入门模式(game_mode=0)。,程序判定,,game.dll 0x10076410 → 0x10077020
+V4,regular,2,,チ ャ レ ン ジ ャ ー,GF/DM,历史最高已游玩谱面难度达到90；不要求该最高难度谱面通关。,程序判定,,game.dll 0x10076890 → 0x10077020
+V4,regular,3,,仙 人,GF/DM,累计play_count达到1000。,程序判定,,game.dll 0x10075BF0 → 0x10077020
+V4,regular,4,,Session Mania,GF/DM,累计Session次数(sess_cnt)达到20。,程序判定,,game.dll 0x10075BF0 → 0x10077020；libshare-pj 0x10018B30
+V4,regular,5,,LEVEL ー,GF/DM,历史最高通关难度达到20。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,6,,LEVEL,GF/DM,历史最高通关难度达到40。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,7,,LEVEL 川,GF/DM,历史最高通关难度达到60。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,8,,LEVEL Ⅳ,GF/DM,历史最高通关难度达到80。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,9,,LEV EL,GF/DM,历史最高通关难度达到99。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,10,,Guitarist,GF,GUITAR累计通关不同曲目达到100；同曲多谱面按一曲计。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,11,,Bassist,GF,BASS累计通关不同曲目达到100；同曲多谱面按一曲计。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,12,,God Fin ger,GF,OPENPICK累计通关不同曲目达到200；同曲多谱面按一曲计。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,13,,Go Finger,GF,OPENPICK累计通关不同曲目达到100；同曲多谱面按一曲计。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,14,,Drummer,DM,DRUM累计通关不同曲目达到100；同曲多谱面按一曲计。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,15,,EXCELLENT 男 爵,GF/DM,当局有效通关记录中，至少一首EXCELLENT。,程序判定,,game.dll 0x10076410 → 0x100770D0
+V4,regular,16,,EXCELLENTfåÆ,GF/DM,当局有效通关记录中，至少一首EXCELLENT且难度达到40。,程序判定,,game.dll 0x10076410 → 0x100770D0
+V4,regular,17,,EXCELLENT 公 爵,GF/DM,当局有效通关记录中，至少一首EXCELLENT且难度达到80。,程序判定,,game.dll 0x10076410 → 0x100770D0
+V4,regular,18,,FU し し COMBO ニ 等 兵,GF/DM,当局有效通关记录中，至少一首FULL COMBO。,程序判定,,game.dll 0x10076410 → 0x100770D0
+V4,regular,19,,F リ し し COMBO 軍 曹,GF/DM,当局有效通关记录中，至少一首FULL COMBO且难度达到50。,程序判定,,game.dll 0x10076410 → 0x100770D0
+V4,regular,20,,FU し し COMBO 大 佐,GF/DM,当局有效通关记录中，至少一首FULL COMBO且难度达到90。,程序判定,,game.dll 0x10076410 → 0x100770D0
+V4,regular,21,,サイクルプレーヤー,GF/DM,普通/入门模式，同一局内通关BASIC、ADVANCED、EXTREME三种难度的谱面。原始判定为有效记录的难度枚举同时含1、2、3。,程序判定＋原始提示图,,game.dll 0x10076410 → 0x100770D0；SET_SETUA021
+V4,regular,22,,Hea 引 i れ,GF/DM,当局第7记录槽played及clear均非零，曲目ID=1422。,程序判定,,game.dll 0x100770D0
+V4,regular,23,,小 覇 王,GF/DM,当前曲目表中所有新曲各至少通关一张有效谱面（失败新曲计数=0）。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,24,,覇 王,GF/DM,当前曲目表中所有有效曲目各至少通关一张谱面（失败曲目计数=0）。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,25,,良 帝,GF/DM,至少存在有效谱面，且不存在未通关的新曲有效谱面。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,26,,天 帝,GF/DM,至少存在有效谱面，且不存在未通关的有效谱面。,程序判定,,game.dll 0x10076890 → 0x100770D0
+V4,regular,27,,LEGEND,GF/DM,"当局第7记录槽played及clear均非零，且曲目属于：305, 403, 504, 618, 619, 703, 710, 802, 839, 902, 920, 1004。",程序判定,305: DAY DREAM / 403: THE LEAST 100SE / 504: KODOMONO RAKUGA / 618: UNDER CONTROL / 619: CONCERTINO IN B / 703: MODEL DD3 / 710: INFINITE / 802: MODEL DD4 / 839: MAD BLAST / 902: MODEL DD5 / 920: TIMEPIECE PHASE / 1004: ONIHIME,game.dll 0x100770D0 / 0x100C7EA8
+V4,regular,28,,RANDOM FREAKS,GF,开启RANDOM选项通关；有效记录的选项块+24字段==1。,程序判定＋原始提示图,,game.dll 0x10076410 → 0x10077340；SET_SETUA028
+V4,regular,29,,SUPER RANDOM FREAKS,GF,开启SUPER RANDOM选项通关；有效记录的选项块+24字段==2。,程序判定＋原始提示图,,game.dll 0x10076410 → 0x10077340；SET_SETUA029
+V4,regular,30,,覚 醒,GF/DM,STEALTH选项值4通关曲目，并满足原生AUTO限制：DM检查该记录选项块+40==0，GF普通模式检查+36!=1；BATTLE分支的GF比较方向不同，须按原始伪码使用。,数值/分支确定；选项语义部分对照V6,,game.dll 0x10076410 → 0x10077340
+V4,regular,31,,無 想,GF/DM,STEALTH选项值4通关难度≥50的曲目，并满足原生AUTO限制：DM检查该记录选项块+40==0，GF普通模式检查+36!=1；BATTLE分支的GF比较方向不同，须按原始伪码使用。,数值/分支确定；选项语义部分对照V6,,game.dll 0x10076410 → 0x10077340
+V4,regular,32,,心 眼,GF/DM,STEALTH选项值4通关难度≥90的曲目，并满足原生AUTO限制：DM检查该记录选项块+40==0，GF普通模式检查+36!=1；BATTLE分支的GF比较方向不同，须按原始伪码使用。,数值/分支确定；选项语义部分对照V6,,game.dll 0x10076410 → 0x10077340
+V4,regular,33,,傾奇者,GF/DM,当局有效通关记录：选项块首DWORD同时置位bit0及bit1，且+4 DWORD==2。,原始条件确定，选项语义待补证,,game.dll 0x10076410 → 0x10077340
+V4,regular,34,,,GF/DM,SKILL POINT达到200（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,35,,,GF/DM,SKILL POINT达到400（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,36,,初 段,GF/DM,SKILL POINT达到600（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,37,,,GF/DM,SKILL POINT达到800（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,38,,,GF/DM,SKILL POINT达到1000（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,39,,四 段,GF/DM,SKILL POINT达到1100（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,40,,五 段,GF/DM,SKILL POINT达到1200（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,41,,,GF/DM,SKILL POINT达到1300（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,42,,免 許 皆 伝,GF/DM,SKILL POINT达到1400（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,43,,,GF/DM,SKILL POINT达到1500（比较原始整数除100后的数值）。,程序判定,,game.dll 0x10075BF0 → 0x100773E0
+V4,regular,44,,TYPE=NORMAL,GF/DM,BATTLE MODE使用NORMAL计分方式（所扫描某场、某方的score_type字段==0）；本分支没有额外胜利要求。,程序判定＋原始提示图,,game.dll 0x100774F0；SET_SETUA044
+V4,regular,45,,TYPE=COMBO,GF/DM,BATTLE MODE使用COMBO重视计分方式（所扫描某场、某方的score_type字段==1）；本分支没有额外胜利要求。,程序判定＋原始提示图,,game.dll 0x100774F0；SET_SETUA045
+V4,regular,46,,TYPE=PERFECT,GF/DM,BATTLE MODE使用PERFECT重视计分方式（所扫描某场、某方的score_type字段==2）；本分支没有额外胜利要求。,程序判定＋原始提示图,,game.dll 0x100774F0；SET_SETUA046
+V4,regular,47,,闘 将,GF/DM,BATTLE累计胜利数达到50。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,48,,闘 神,GF/DM,BATTLE累计胜利数达到100。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,49,,鬼 神,GF/DM,BATTLE累计胜利数达到300。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,50,,阿 修 羅,GF/DM,BATTLE累计胜利数达到500。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,51,,閻 魔,GF/DM,BATTLE累计胜利数达到1000。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,52,,国 士 無 双,GF/DM,BATTLE历史最高连胜达到5。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,53,,天 下 無 双,GF/DM,BATTLE vip_rensyo计数达到10。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,54,,連 勝 ス ト ッ パ ー,GF/DM,网络BATTLE(game_mode=3)取得胜利，且对手连续胜利字段≥4；显示连胜口径未核准。,程序判定,,game.dll 0x100774F0
+V4,regular,55,,大 連 勝 ス ト ッ パ ー,GF/DM,网络BATTLE(game_mode=3)取得胜利，且对手连续胜利字段≥9；显示连胜口径未核准。,程序判定,,game.dll 0x100774F0
+V4,regular,56,,GLADIATOR,GF/DM,BATTLE历史最高class编号达到14。,数值确定，class名称待补证,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,57,,トリックスター,GF/DM,BATTLE随机选曲累计random_select达到50；0x10514B18经发送结构+188写入协议random_select。,程序判定,,game.dll 0x10029DD0 → 0x100774F0；libshare-pj 0x10019970/0x10018023
+V4,regular,58,,ベストバウト,GF/DM,BATTLE某场双方均满足play/clear旗标组合；具体见0x100774F0的v44==3分支。,原始条件确定，旗标语义待补证,,game.dll 0x100774F0
+V4,regular,59,,逆 転 劇,GF/DM,网络BATTLE获胜，且本人本场分数字段减对手分数字段≥300000。,程序判定,,game.dll 0x100774F0
+V4,regular,60,,真・BeForUサポーターズ,GF/DM,网络BATTLE，双方资料的两个字段均分别等于0、127。,原始条件确定，资料字段语义待补证,,game.dll 0x100774F0
+V4,regular,61,,出会いのリーゾン,GF/DM,BATTLE某场对手资料+268与本人战斗记录对应字段相等。,原始条件确定，资料字段语义待补证,,game.dll 0x100774F0
+V4,regular,62,,STONE COLLECTOR,GF/DM,BATTLE累计stone字段达到1。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,63,,STONE HUNTER,GF/DM,BATTLE累计stone字段达到10。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,64,,STONE MANIA,GF/DM,BATTLE累计stone字段达到50。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,65,,STONE MASTER,GF/DM,BATTLE累计stone字段达到100。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,66,,STONE 靨 に LIO 慊 E,GF/DM,BATTLE累计stone字段达到500。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,67,,STONE 8 に LIO 慊 E,GF/DM,BATTLE累计stone字段达到1000。,程序判定,,game.dll 0x10029DD0 → 0x100774F0
+V4,regular,68,,GP ROOKIE,GF/DM,50×5条历史排名记录中，满足id整除100所得组号>0、原id减组号>0、记录+16>0的条数达到10。,原始条件确定，排名记录语义待补证,,game.dll 0x10077E60
+V4,regular,69,,GPREGULAR,GF/DM,50×5条历史排名记录中，满足id整除100所得组号>0、原id减组号>0、记录+16>0的条数达到20。,原始条件确定，排名记录语义待补证,,game.dll 0x10077E60
+V4,regular,70,,GPVETERAN,GF/DM,50×5条历史排名记录中，满足id整除100所得组号>0、原id减组号>0、记录+16>0的条数达到30。,原始条件确定，排名记录语义待补证,,game.dll 0x10077E60
+V4,regular,71,,GP LEVEL—I,GF/DM,参加GRAND PRIX模式（全局GP标志0x104FD708非零）。,程序判定,,game.dll 0x10077E60；0x1002AA00的eam_report_grandprix_playcnt调用
+V4,regular,72,,GP LEVEL—,GF/DM,累计GP点数(grand_prix/total_gp_point)达到500。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,73,,GP LEVEL— 川,GF/DM,累计GP点数(grand_prix/total_gp_point)达到1000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,74,,GP LEVEL— Ⅳ,GF/DM,累计GP点数(grand_prix/total_gp_point)达到3000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,75,,GP LEVEL—V,GF/DM,累计GP点数(grand_prix/total_gp_point)达到5000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,76,,GP LEVEL—VI,GF/DM,累计GP点数(grand_prix/total_gp_point)达到7000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,77,,GP LEVEL—VII,GF/DM,累计GP点数(grand_prix/total_gp_point)达到10000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,78,,GP LEVEL—VIII,GF/DM,累计GP点数(grand_prix/total_gp_point)达到15000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,79,,GP LEVEL— Ⅸ,GF/DM,累计GP点数(grand_prix/total_gp_point)达到20000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,80,,GPMASTER,GF/DM,累计GP点数(grand_prix/total_gp_point)达到30000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,81,,GP G A 物 0 MASTER,GF/DM,累计GP点数(grand_prix/total_gp_point)达到50000。,程序判定,,game.dll 0x10077E60；libshare-pj 0x10018B30
+V4,regular,82,,,GF/DM,当局随机选曲记录中random_selected==1且music_id=811。此分支不再检查clear。,程序判定,,game.dll 0x10076F70 → 0x100782B0
+V4,regular,83,,Happy man,GF/DM,当局随机选曲记录中random_selected==1且music_id=5。此分支不再检查clear。,程序判定,,game.dll 0x10076F70 → 0x100782B0
+V4,regular,84,,LUCKY? STAFF,GF/DM,当局随机选曲记录中random_selected==1且music_id=208。此分支不再检查clear。,程序判定,,game.dll 0x10076F70 → 0x100782B0
+V4,regular,85,,セ 福 神,GF/DM,当局随机选曲记录中random_selected==1且music_id=1307。此分支不再检查clear。,程序判定,,game.dll 0x10076F70 → 0x100782B0
+V4,regular,86,,抽 選 王,GF/DM,当局随机选曲列表计数>0，且扫描到一条记录。注意写标志位于random_selected判断外。,程序判定,,game.dll 0x10076F70 → 0x100782B0
+V4,regular,87,,抽 選 大 王,GF/DM,BATTLE某场双方资料两字段均为0、86，且双方另一个有效字节标志均非零。,原始条件确定，资料字段语义待补证,,game.dll 0x100774F0
+V4,regular,88,,SPIRIT OF FIRE,GF/DM,"同一局内通关全部指定曲目：604, 751, 1000, 1401。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,604: O JIYA / 751: ROOPA / 1000: YARA TUM KAHAN / 1401: GORI GORI,game.dll 0x10078CE0 / 0x100b4738
+V4,regular,89,,SPIRIT OF JET,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：5, 21, 23, 102, 114, 207, 208, 234, 411, 505, 528, 621, 821, 913, 1002；逐曲计数，可分局累计。",程序判定,5: HAPPY MAN / 21: JET WORLD / 23: MR MACHINE / 102: LOUD / 114: PRIMAL SOUL / 207: FIRE / 208: LUCKY STAFF / 234: FIRE LONG VERSI / 411: MAGICAL JET TOU / 505: MIDNIGHT SUN / 528: RIFF RIFF PARAD / 621: RIFF RIFF ORBIT / 821: CRIES IN THE WI / 913: RISE / 1002: SUNRISE STREET,game.dll 0x10076890 → 0x100784d0 / 0x100c7ed8
+V4,regular,90,,若 衆,GF/DM,"同一局内通关全部指定曲目：704, 919, 1007, 1409。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,704: KISS ME GOODBYE / 919: SHOWER OF LOVE / 1007: PASSION / 1409: SWIMMING IN LOV,game.dll 0x10078CE0 / 0x100b474c
+V4,regular,91,,親 分 衆,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：15, 133, 407, 539, 705, 805, 906, 907, 1006, 1108, 1308, 1408；逐曲计数，可分局累计。",程序判定,15: ACROSS THE NIGH / 133: SEA ANEMONES / 407: THREE WORMS / 539: HERRING ROE / 705: KEIKO MY LOVE / 805: MANGEKYO / 906: JOKER / 907: COCKPIT / 1006: ORBITAL VELOCIT / 1108: WONDERFUL WORKE / 1308: MIRAGE RESIDENC / 1408: ZIGZAG LIFE,game.dll 0x10076890 → 0x10078550 / 0x100c7f14
+V4,regular,92,,Ko 加 検 定 2 級 合 格 者,GF/DM,"同一局内通关全部指定曲目：956, 1207, 1309, 1410。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,956: AITHON / 1207: ATALANTE / 1309: RING / 1410: SLANG,game.dll 0x10078CE0 / 0x100b4760
+V4,regular,93,,Ko 加 検 定 1 級 合 格 者,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：515, 612, 613, 623, 712, 807, 808, 908, 909, 956, 1008, 1009, 1109, 1110, 1207, 1208, 1309；逐曲计数，可分局累计。",程序判定,515: BLIND / 612: WILD RIDE / 613: ROCKIN' PARADIS / 623: BRING BACK / 712: SWEET FELINE / 807: UTOPIA / 808: COUNTRY DAY / 908: LIBRA / 909: ELECTRIC SUN / 956: AITHON / 1008: DRAGON BLADE / 1009: REAL / 1109: DESERT ROSE / 1110: SAY / 1207: ATALANTE / 1208: SPELLBOUND / 1309: RING,game.dll 0x10076890 → 0x100785d0 / 0x100c7f48
+V4,regular,94,,シ ョ ン ポ リ く ら ぶ,GF/DM,"同一局内通关全部指定曲目：614, 812, 955, 1015。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,614: DARE / 812: SHUNTEKIAIKA / 955: JUN BEN KA / 1015: FUTARI HA RABUR,game.dll 0x10078CE0 / 0x100b4774
+V4,regular,95,,コ ロ ポ ン,GF/DM,"同一局内通关全部指定曲目：954, 1117, 1305, 1407。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,954: NEJI NO HITO / 1117: MUSHROOM BOY / 1305: RURURU / 1407: VERTIGO,game.dll 0x10078CE0 / 0x100b4788
+V4,regular,96,,お 天 道 虫 様,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：617, 706, 803, 904, 905, 954, 1027, 1227, 1304, 1405；逐曲计数，可分局累计。",程序判定,617: SANAGI / 706: TSUMINAGARA TO / 803: GEKKOUCHOU / 904: KONOKONONANATSU / 905: AGNUS DEI / 954: NEJI NO HITO / 1027: AKAISUZU / 1227: HOTARU / 1304: KITONITUGU / 1405: KYOKUTO SHIKI,game.dll 0x10076890 → 0x10078650 / 0x100c7f8c
+V4,regular,97,,TOMOSUKE 家,GF/DM,"同一局内通关全部指定曲目：408, 709, 1113, 1321。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,408: ORANGE JET STRE / 709: CHOCOLATE PHILO / 1113: NYANDAFUL GO GO / 1321: APXN,game.dll 0x10078CE0 / 0x100b479c
+V4,regular,98,,真 ・ TOMOSUKE 本 家,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：301, 302, 408, 500, 501, 600, 601, 709, 710, 811, 823, 910, 911, 1010, 1011, 1112, 1113, 1114, 1216, 1321；逐曲计数，可分局累计。",程序判定,301: FURI FURI'60 / 302: GIANT SLUG / 408: ORANGE JET STRE / 500: SUNFLOWER GIRL / 501: BRAZILIAN ANTHE / 600: JET COASTER GIR / 601: REBIRTH / 709: CHOCOLATE PHILO / 710: INFINITE / 811: 777 / 823: TWINKLE STAR / 910: KAGONOTORI / 911: MINT CANDY CITR / 1010: MEIKYOSISUI / 1011: REACHING FOR TH / 1112: REBIRTH OF LOVE / 1113: NYANDAFUL GO GO / 1114: FLOW / 1216: TIZONA D ELCID / 1321: APXN,game.dll 0x10076890 → 0x100786d0 / 0x100c7fb8
+V4,regular,99,,ZENITH,GF/DM,"同一局内通关全部指定曲目：1016, 1129, 1317, 1414。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,1016: WE ARE / 1129: ESCAPE TO THE S / 1317: ZE NITH / 1414: REVOLUTION,game.dll 0x10078CE0 / 0x100b47b0
+V4,regular,100,,0 0 S ・ ラ ー,GF/DM,"同一局内通关全部指定曲目：721, 836, 968, 1415。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,721: TOO LATE TWO / 836: DAIKENKAI / 968: HANA TSUKI KISE / 1415: FEEL THE BREEZE,game.dll 0x10078CE0 / 0x100b47c4
+V4,regular,101,,p ー れ 一 5 t,GF/DM,"同一局内通关全部指定曲目：503, 708, 752, 963。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,503: BOBBY SUE AND S / 708: TO THE IST / 752: TAMAYURA / 963: WALL STREET DOW,game.dll 0x10078CE0 / 0x100b47d8
+V4,regular,102,,BRASS BROTHERS,GF/DM,"同一局内通关全部指定曲目：7, 112, 813, 1123。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,7: SKA SKA NO1 / 112: CLASSIC PARTY / 813: LA ARENA ROJA / 1123: ANCIENT BREEZE,game.dll 0x10078CE0 / 0x100b47ec
+V4,regular,103,,SWING GUYS,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：7, 112, 318, 405, 532, 609, 610, 611, 717, 813, 837, 912, 924, 967, 1012, 1123, 1125；逐曲计数，可分局累计。",程序判定,7: SKA SKA NO1 / 112: CLASSIC PARTY / 318: CLASSIC PARTY 2 / 405: CASSANDRA / 532: CLASSIC PARTY T / 609: SUIMAAZU / 610: ONE PHRASE BLUE / 611: DOUBLE TROUBLE / 717: MIKENEKO ROKKU / 813: LA ARENA ROJA / 837: RINGO TO HACHIM / 912: SHIKARAREBIYORI / 924: CLASSIC PARTY F / 967: WARUAGAKI / 1012: RYUKYU RANDEBU / 1123: ANCIENT BREEZE / 1125: MOUSOUGAKUEN IN,game.dll 0x10076890 → 0x10078750 / 0x100c8008
+V4,regular,104,,王 ZSILVER,GF/DM,"同一局内通关全部指定曲目：606, 1019, 1121, 1205。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,606: MOONLIGHT WALKI / 1019: PRISM / 1121: AKOGARE / 1205: RAKUENNOTENSHI,game.dll 0x10078CE0 / 0x100b4800
+V4,regular,105,,王 冠 GO し 0,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：104, 303, 304, 401, 508, 509, 510, 605, 606, 713, 726, 809, 810, 957, 1018, 1019, 1120, 1121, 1122, 1204, 1205, 1206, 1310, 1311, 1411；逐曲计数，可分局累计。",程序判定,104: ON OUR WAY / 303: NOW IM SURE / 304: NA NA NA / 401: NEVER AGAIN / 508: WAKE ME UP / 509: MISTER MAGIC / 510: YELLOW PANIC TI / 605: DREAM RUSH / 606: MOONLIGHT WALKI / 713: CACHACA / 726: SWEET ILLUSION / 809: SPIP / 810: BLACK HORIZON / 957: CHOTTO / 1018: DEDICATION / 1019: PRISM / 1120: WHITE ｔORNADO / 1121: AKOGARE / 1122: LOOKS / 1204: SAISOKUTOUHIKOU / 1205: RAKUENNOTENSHI / 1206: GREEN LIME / 1310: PURPLE STORM / 1311: BITTERSWEET / 1411: CHARISMATIC,game.dll 0x10076890 → 0x100787d0 / 0x100c8050
+V4,regular,106,,“ F ” し 引 ON T,GF/DM,"同一局内通关全部指定曲目：716, 938, 1331, 1427。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,716: THE OCEAN AND Y / 938: SAVE A LITTLE S / 1331: ANOHINOKAZE / 1427: TRUE LOVE AND V,game.dll 0x10078CE0 / 0x100b4814
+V4,regular,107,,00S 朝 れ y ー 0 ・ r,GF/DM,"同一局内通关全部指定曲目：603, 750, 801, 1001。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,603: DESTINY LOVERS / 750: SUTAANO KOIBITO / 801: NAMIDA NO REGRE / 1001: MY FRIEND,game.dll 0x10078CE0 / 0x100b4828
+V4,regular,108,,C00 し VOICE,GF/DM,"同一局内通关全部指定曲目：809, 818, 908, 1312。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,809: SPIP / 818: OUT OF BREATH / 908: LIBRA / 1312: NO HESITATION,game.dll 0x10078CE0 / 0x100b483c
+V4,regular,109,,,GF/DM,"同一局内通关全部指定曲目：402, 516, 753, 912。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,402: SILLY GIRL / 516: KIMINO TONARINI / 753: WASUREMONO / 912: SHIKARAREBIYORI,game.dll 0x10078CE0 / 0x100b4850
+V4,regular,110,,CHAOS CLUTCH,GF/DM,"同一局内通关全部指定曲目：406, 502, 618, 839。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,406: FIRE IN THE DAR / 502: PLASTIC IMITATI / 618: UNDER CONTROL / 839: MAD BLAST,game.dll 0x10078CE0 / 0x100b4864
+V4,regular,111,,ROCKXROCK,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：613, 824, 1303, 1450；逐曲计数，可分局累计。",程序判定,613: ROCKIN' PARADIS / 824: USED TO ROCKNRO / 1303: ROCK STAR / 1450: LONG LIVE ROCK,game.dll 0x10076890 → 0x10078850 / 0x100c80b4
+V4,regular,112,,METAL KING,GF/DM,"同一局内通关全部指定曲目：1230, 1435, 1436, 1437。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,1230: METAL QUEEN / 1435: IMMORTAL BIND / 1436: NEMESIS / 1437: LEAVING ALL BEH,game.dll 0x10078CE0 / 0x100b4878
+V4,regular,113,,ゴ リ ラ,GF/DM,"同一局内通关全部指定曲目：133, 1025, 1115, 1446。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,133: SEA ANEMONES / 1025: ROLLING 1000TOO / 1115: AISYUU NO KORIG / 1446: TARIHO,game.dll 0x10078CE0 / 0x100b488c
+V4,regular,114,,默 使 い,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：101, 717, 960, 1012, 1113, 1132, 1225, 1321；逐曲计数，可分局累计。",程序判定,101: MIDNIGHT SPECIA / 717: MIKENEKO ROKKU / 960: PEPAMINTO HA WA / 1012: RYUKYU RANDEBU / 1113: NYANDAFUL GO GO / 1132: DESTRUCTIVE WAV / 1225: KAZENIFUKARETE / 1321: APXN,game.dll 0x10076890 → 0x100788d0 / 0x100c80c4
+V4,regular,115,,魔 法 使 い,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：411, 509, 1203, 1226, 1330, 1442；逐曲计数，可分局累计。",程序判定,411: MAGICAL JET TOU / 509: MISTER MAGIC / 1203: MAGIC WORDS / 1226: MAHOU NO TARUTO / 1330: ANGEL MAGIC / 1442: MAHOUNOKOTOBA,game.dll 0x10076890 → 0x10078950 / 0x100c80e4
+V4,regular,116,,忍 者,GF/DM,"同一局内通关全部指定曲目：940, 1010, 1141。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,940: SADAME / 1010: MEIKYOSISUI / 1141: LIAR,game.dll 0x10078CE0 / 0x100b48a0
+V4,regular,117,,サ ム ラ イ,GF/DM,"同一局内通关全部指定曲目：15, 1105, 1319。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,15: ACROSS THE NIGH / 1105: SANDOGASA PONTA / 1319: SAMURAI,game.dll 0x10078CE0 / 0x100b48b4
+V4,regular,118,,,GF/DM,"同一局内通关全部指定曲目：1131, 1224, 1313。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,1131: DIE ZAUBERFLOTE / 1224: THE LEGEND / 1313: EL DORADO,game.dll 0x10078CE0 / 0x100b48c8
+V4,regular,119,,踊 り 子,GF/DM,"同一局内通关全部指定曲目：615, 800, 1103。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,615: GETAWAY / 800: TIERRA BUENA / 1103: TALATTA DANCE,game.dll 0x10078CE0 / 0x100b48dc
+V4,regular,120,,NIGHTMARE,GF/DM,"同一局内通关全部指定曲目：15, 1443, 1449, 1454。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,15: ACROSS THE NIGH / 1443: BLACK NIGHT / 1449: STILL OF THE NI / 1454: ROCK AND ROLL A,game.dll 0x10078CE0 / 0x100b48f0
+V4,regular,121,,,GF/DM,"同一局内通关全部指定曲目：410, 606, 803, 968。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,410: MR MOON / 606: MOONLIGHT WALKI / 803: GEKKOUCHOU / 968: HANA TSUKI KISE,game.dll 0x10078CE0 / 0x100b4904
+V4,regular,122,,小 宇 宙,GF/DM,"同一局内通关全部指定曲目：110, 514, 815, 1006。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,110: COSMIC COWGIRL / 514: SEIRON / 815: GET READY / 1006: ORBITAL VELOCIT,game.dll 0x10078CE0 / 0x100b4918
+V4,regular,123,,BEMANI,GF/DM,"同一局内通关全部指定曲目：431, 722, 1429, 1433。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,431: SHIRITORI / 722: BREAK DOWN / 1429: TAIYO / 1433: MURMUR TWINS,game.dll 0x10078CE0 / 0x100b492c
+V4,regular,124,,ビ ク ト リ ー ザ ル イ ン ポ -,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：408, 510, 619, 806, 900, 1206, 1310；逐曲计数，可分局累计。",程序判定,408: ORANGE JET STRE / 510: YELLOW PANIC TI / 619: CONCERTINO IN B / 806: IMPULSE OF BLUE / 900: RPMRED / 1206: GREEN LIME / 1310: PURPLE STORM,game.dll 0x10076890 → 0x100789d0 / 0x100c80fc
+V4,regular,125,,刑 事,GF/DM,"同一局内通关全部指定曲目：1109, 1130, 1223, 1422。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,1109: DESERT ROSE / 1130: MUJOU NO HOSHI / 1223: HONGKONG / 1422: ICHIMOUDAJIN,game.dll 0x10078CE0 / 0x100b4940
+V4,regular,126,,バ テ ィ シ ェ,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：11, 620, 709, 830, 837, 911, 926, 951, 1014；逐曲计数，可分局累计。",程序判定,11: CUTIE PIE / 620: POT POURRI D OR / 709: CHOCOLATE PHILO / 830: CHERII / 837: RINGO TO HACHIM / 911: MINT CANDY CITR / 926: POT POURRI D MA / 951: BARIBARI BUGI / 1014: KOTATSU TO MIKA,game.dll 0x10076890 → 0x10078a50 / 0x100c8118
+V4,regular,127,,Fo 「 U サ ポ ー タ ー,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：722, 755, 820, 916, 1017, 1128, 1219, 1318, 1431；逐曲计数，可分局累计。",程序判定,722: BREAK DOWN / 755: BEGIN / 820: CHI KA RA / 916: HIMAWARI / 1017: SHINING / 1128: SHINARIO / 1219: BLACK OUT / 1318: YAMATONADESIKO / 1431: STRIKE PARTY,game.dll 0x10076890 → 0x10078ad0 / 0x100c813c
+V4,regular,128,,ENCORE CONQUEST,GF/DM,"历史曲目表中的下列曲目各已有至少一个通关谱面：305, 403, 504, 618, 619, 703, 710, 802, 839, 902, 920, 1004, 1104, 1131, 1201, 1213, 1300, 1302；逐曲计数，可分局累计。",程序判定,305: DAY DREAM / 403: THE LEAST 100SE / 504: KODOMONO RAKUGA / 618: UNDER CONTROL / 619: CONCERTINO IN B / 703: MODEL DD3 / 710: INFINITE / 802: MODEL DD4 / 839: MAD BLAST / 902: MODEL DD5 / 920: TIMEPIECE PHASE / 1004: ONIHIME / 1104: FAIRY TALES / 1131: DIE ZAUBERFLOTE / 1201: MODEL DD7 / 1213: OVER THERE / 1300: MODEL FT2 / 1302: MODEL FT2 MIRAC,game.dll 0x10076890 → 0x10078b50 / 0x100c8160
+V4,regular,129,,MODEL DD MÅSTER,GF/DM,"历史曲目表中的下列曲目各已有至少一个EXTREME通关谱面：305, 602, 703, 802, 902, 1003, 1201, 1400；逐曲计数，可分局累计。",程序判定,305: DAY DREAM / 602: MODEL DD2 / 703: MODEL DD3 / 802: MODEL DD4 / 902: MODEL DD5 / 1003: MODEL DD6 / 1201: MODEL DD7 / 1400: MODEL DD8,game.dll 0x10076890 → 0x10078bd0 / 0x100c81a8
+V4,regular,130,,ち ゃ ん こ 山 崎,GF/DM,"同一局内通关全部指定曲目：705, 1006, 1108。扫描当局7个记录槽，需played及clear均非零；不限顺序/难度/部件。",程序判定,705: KEIKO MY LOVE / 1006: ORBITAL VELOCIT / 1108: WONDERFUL WORKE,game.dll 0x10078CE0 / 0x100b4954
+V4,regular,131,,573マン,GF/DM,通关时MAX COMBO恰好573；当局有效通关记录的+360 DWORD==573。,程序判定＋原始提示图,,game.dll 0x10076410 → 0x10078330；SET_SETUA131
+V4,regular,132,,573メン,GF/DM,Session共同通关时MAX COMBO恰好573；普通/入门模式有效通关记录且Session有效标志非零、对应统计字段==573。,程序判定＋原始提示图,,game.dll 0x10076410 → 0x10078330；SET_SETUA132
+V4,regular,133,,ENCORE CLUB,GF/DM,累计ENCORE游玩次数达到10（协议encore_play）。,程序判定,,game.dll 0x10075BF0 → 0x10078330；libshare-pj 0x10018B30
+V4,regular,134,,ENCORE ÅLLIANCE,GF/DM,累计ENCORE游玩次数达到100（协议encore_play）。,程序判定,,game.dll 0x10075BF0 → 0x10078330；libshare-pj 0x10018B30
+V4,regular,135,,PREMIUM C し 旧,GF/DM,累计PREMIUM游玩次数达到10（协议premium_play）。,程序判定,,game.dll 0x10075BF0 → 0x10078330；libshare-pj 0x10018B30
+V4,regular,136,,PREMIUM ÅLLIANCE,GF/DM,累计PREMIUM游玩次数达到100（协议premium_play）。,程序判定,,game.dll 0x10075BF0 → 0x10078330；libshare-pj 0x10018B30
+V4,regular,137,,繋 ぎ 屋,GF/DM,FULL COMBO的不同曲目数达到200。,程序判定,,game.dll 0x10076890 → 0x10078330
+V4,regular,138,,神 の 手,GF/DM,EXCELLENT的不同曲目数达到GF200 / DM100。,程序判定,,game.dll 0x10076890 → 0x10078330
+V4,regular,139,,Master of Meisters,GF/DM,Perfect、Clear、Combo、Difficulty四类Meister全部达到6级；当局玩家结构+2112有效，四类等级DWORD全都==6。,程序判定＋原始提示图,,game.dll 0x10078420；SET_SETUA139..143
+V4,regular,140,,Perfect Meister,GF/DM,Perfect Meister达到6级；当局玩家结构+2112有效，且+2096 DWORD==6。,程序判定＋原始提示图,,game.dll 0x10078420；SET_SETUA140
+V4,regular,141,,Combo Meister,GF/DM,Combo Meister达到6级；当局玩家结构+2112有效，且+2104 DWORD==6。,程序判定＋原始提示图,,game.dll 0x10078420；SET_SETUA141
+V4,regular,142,,Difficulty Meister,GF/DM,Difficulty Meister达到6级；当局玩家结构+2112有效，且+2108 DWORD==6。,程序判定＋原始提示图,,game.dll 0x10078420；SET_SETUA142
+V4,regular,143,,Clear Meister,GF/DM,Clear Meister达到6级；当局玩家结构+2112有效，且+2100 DWORD==6。,程序判定＋原始提示图,,game.dll 0x10078420；SET_SETUA143
+V4,commemorative,0,,,GF/DM,服务器kikan_event字段置位0x4。季节/活动由服务器事件位控制，客户端不在此处比较真实日期。,程序判定,,game.dll 0x10078EF0
+V4,commemorative,1,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,2,,,GF/DM,服务器kikan_event置位0x08，且当局7个记录槽之一played非零、music_id=709；本分支不额外要求clear。,程序判定,,game.dll 0x10078EF0
+V4,commemorative,3,,,GF/DM,服务器kikan_event字段置位0x2。季节/活动由服务器事件位控制，客户端不在此处比较真实日期。,程序判定,,game.dll 0x10078EF0
+V4,commemorative,4,,,GF/DM,服务器kikan_event置位0x10，且当局7个记录槽之一played非零、music_id=1108；本分支不额外要求clear。,程序判定,,game.dll 0x10078EF0
+V4,commemorative,5,,,GF/DM,服务器kikan_event字段置位0x1。季节/活动由服务器事件位控制，客户端不在此处比较真实日期。,程序判定,,game.dll 0x10078EF0
+V4,commemorative,6,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,7,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,8,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,9,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,10,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,11,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,12,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,13,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,14,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,15,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,16,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,17,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,18,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,19,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,20,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,21,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,22,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,23,,,GF/DM,服务器topranker字节置位0x1；工作区+34644来自profile+266。,程序判定＋协议字段,,game.dll 0x10078EF0
+V4,commemorative,24,,,GF/DM,服务器topranker字节置位0x2；工作区+34644来自profile+266。,程序判定＋协议字段,,game.dll 0x10078EF0
+V4,commemorative,25,,,GF/DM,本版接收及保存该ID，但已定位的正常新授予路径没有写入；不能据此宣称当前可解禁。,保留ID；当前授予条件未发现,,game.dll 0x10075BF0 / 0x10078EF0 / 0x100791E0
+V4,commemorative,26,,,GF/DM,满足二者之一：①全局byte_101277D4非零，且任一GP历史记录有正的类别与子ID、排名字段+16==1；②服务器is_get_ticket(profile+0x38)==1。全局门槛语义仍待核准。,原始条件确定；全局门槛待补证,,game.dll 0x100791E0；libshare-pj 0x10018B30
+V4,commemorative,27,,,GF/DM,任一GP历史记录：q=id/100==69、id-q>0且排名字段+16==1。,程序判定；大会名称待对照图片,,game.dll 0x100791E0
+V4,commemorative,28,,,GF/DM,任一GP历史记录：q=id/100==69、id-q>0且排名字段+16>0（此分支没有前10限制）。,程序判定；大会名称待对照图片,,game.dll 0x100791E0
+V4,commemorative,29,,,GF/DM,GP历史记录类别q=id/100==1，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,30,,,GF/DM,GP历史记录类别q=id/100==1，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,31,,,GF/DM,GP历史记录类别q=id/100==2，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,32,,,GF/DM,GP历史记录类别q=id/100==2，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,33,,,GF/DM,GP历史记录类别q=id/100==3，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,34,,,GF/DM,GP历史记录类别q=id/100==3，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,35,,,GF/DM,GP历史记录类别q=id/100==4，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,36,,,GF/DM,GP历史记录类别q=id/100==4，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,37,,,GF/DM,GP历史记录类别q=id/100==5，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,38,,,GF/DM,GP历史记录类别q=id/100==5，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,39,,,GF/DM,GP历史记录类别q=id/100==6，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,40,,,GF/DM,GP历史记录类别q=id/100==6，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,41,,,GF/DM,GP历史记录类别q=id/100==7，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,42,,,GF/DM,GP历史记录类别q=id/100==7，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,43,,,GF/DM,GP历史记录类别q=id/100==8，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,44,,,GF/DM,GP历史记录类别q=id/100==8，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,45,,,GF/DM,GP历史记录类别q=id/100==9，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,46,,,GF/DM,GP历史记录类别q=id/100==9，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,47,,,GF/DM,GP历史记录类别q=id/100==10，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,48,,,GF/DM,GP历史记录类别q=id/100==10，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,49,,,GF/DM,GP历史记录类别q=id/100==11，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,50,,,GF/DM,GP历史记录类别q=id/100==11，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,51,,,GF/DM,GP历史记录类别q=id/100==12，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,52,,,GF/DM,GP历史记录类别q=id/100==12，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,53,,,GF/DM,GP历史记录类别q=id/100==13，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,54,,,GF/DM,GP历史记录类别q=id/100==13，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,55,,,GF/DM,GP历史记录类别q=id/100==14，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,56,,,GF/DM,GP历史记录类别q=id/100==14，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,57,,,GF/DM,GP历史记录类别q=id/100==15，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,58,,,GF/DM,GP历史记录类别q=id/100==15，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,59,,,GF/DM,GP历史记录类别q=id/100==16，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,60,,,GF/DM,GP历史记录类别q=id/100==16，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,61,,,GF/DM,GP历史记录类别q=id/100==17，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,62,,,GF/DM,GP历史记录类别q=id/100==17，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,63,,,GF/DM,GP历史记录类别q=id/100==18，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,64,,,GF/DM,GP历史记录类别q=id/100==18，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,65,,,GF/DM,GP历史记录类别q=id/100==19，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,66,,,GF/DM,GP历史记录类别q=id/100==19，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,67,,,GF/DM,GP历史记录类别q=id/100==20，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,68,,,GF/DM,GP历史记录类别q=id/100==20，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,69,,,GF/DM,GP历史记录类别q=id/100==21，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,70,,,GF/DM,GP历史记录类别q=id/100==21，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,71,,,GF/DM,GP历史记录类别q=id/100==22，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,72,,,GF/DM,GP历史记录类别q=id/100==22，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,73,,,GF/DM,GP历史记录类别q=id/100==23，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,74,,,GF/DM,GP历史记录类别q=id/100==23，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,75,,,GF/DM,GP历史记录类别q=id/100==24，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,76,,,GF/DM,GP历史记录类别q=id/100==24，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,77,,,GF/DM,GP历史记录类别q=id/100==25，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,78,,,GF/DM,GP历史记录类别q=id/100==25，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,79,,,GF/DM,GP历史记录类别q=id/100==26，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,80,,,GF/DM,GP历史记录类别q=id/100==26，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,81,,,GF/DM,GP历史记录类别q=id/100==27，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,82,,,GF/DM,GP历史记录类别q=id/100==27，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,83,,,GF/DM,GP历史记录类别q=id/100==28，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,84,,,GF/DM,GP历史记录类别q=id/100==28，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,85,,,GF/DM,GP历史记录类别q=id/100==29，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,86,,,GF/DM,GP历史记录类别q=id/100==29，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,87,,,GF/DM,GP历史记录类别q=id/100==30，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,88,,,GF/DM,GP历史记录类别q=id/100==30，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,89,,,GF/DM,GP历史记录类别q=id/100==31，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,90,,,GF/DM,GP历史记录类别q=id/100==31，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,91,,,GF/DM,GP历史记录类别q=id/100==32，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,92,,,GF/DM,GP历史记录类别q=id/100==32，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,93,,,GF/DM,GP历史记录类别q=id/100==33，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,94,,,GF/DM,GP历史记录类别q=id/100==33，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,95,,,GF/DM,GP历史记录类别q=id/100==34，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,96,,,GF/DM,GP历史记录类别q=id/100==34，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,97,,,GF/DM,GP历史记录类别q=id/100==35，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,98,,,GF/DM,GP历史记录类别q=id/100==35，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,99,,,GF/DM,GP历史记录类别q=id/100==36，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,100,,,GF/DM,GP历史记录类别q=id/100==36，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,101,,,GF/DM,GP历史记录类别q=id/100==37，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,102,,,GF/DM,GP历史记录类别q=id/100==37，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,103,,,GF/DM,GP历史记录类别q=id/100==38，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,104,,,GF/DM,GP历史记录类别q=id/100==38，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,105,,,GF/DM,GP历史记录类别q=id/100==39，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,106,,,GF/DM,GP历史记录类别q=id/100==39，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,107,,,GF/DM,GP历史记录类别q=id/100==40，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,108,,,GF/DM,GP历史记录类别q=id/100==40，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,109,,,GF/DM,GP历史记录类别q=id/100==41，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,110,,,GF/DM,GP历史记录类别q=id/100==41，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,111,,,GF/DM,GP历史记录类别q=id/100==42，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,112,,,GF/DM,GP历史记录类别q=id/100==42，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,113,,,GF/DM,GP历史记录类别q=id/100==43，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,114,,,GF/DM,GP历史记录类别q=id/100==43，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,115,,,GF/DM,GP历史记录类别q=id/100==44，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,116,,,GF/DM,GP历史记录类别q=id/100==44，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,117,,,GF/DM,GP历史记录类别q=id/100==45，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,118,,,GF/DM,GP历史记录类别q=id/100==45，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,119,,,GF/DM,GP历史记录类别q=id/100==46，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,120,,,GF/DM,GP历史记录类别q=id/100==46，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,121,,,GF/DM,GP历史记录类别q=id/100==47，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,122,,,GF/DM,GP历史记录类别q=id/100==47，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,123,,,GF/DM,GP历史记录类别q=id/100==48，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,124,,,GF/DM,GP历史记录类别q=id/100==48，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,125,,,GF/DM,GP历史记录类别q=id/100==49，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,126,,,GF/DM,GP历史记录类别q=id/100==49，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,127,,,GF/DM,GP历史记录类别q=id/100==50，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,128,,,GF/DM,GP历史记录类别q=id/100==50，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,129,,,GF/DM,GP历史记录类别q=id/100==51，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,130,,,GF/DM,GP历史记录类别q=id/100==51，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,131,,,GF/DM,GP历史记录类别q=id/100==52，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,132,,,GF/DM,GP历史记录类别q=id/100==52，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,133,,,GF/DM,GP历史记录类别q=id/100==53，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,134,,,GF/DM,GP历史记录类别q=id/100==53，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,135,,,GF/DM,GP历史记录类别q=id/100==54，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,136,,,GF/DM,GP历史记录类别q=id/100==54，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,137,,,GF/DM,GP历史记录类别q=id/100==55，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,138,,,GF/DM,GP历史记录类别q=id/100==55，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,139,,,GF/DM,GP历史记录类别q=id/100==56，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,140,,,GF/DM,GP历史记录类别q=id/100==56，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,141,,,GF/DM,GP历史记录类别q=id/100==57，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,142,,,GF/DM,GP历史记录类别q=id/100==57，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,143,,,GF/DM,GP历史记录类别q=id/100==58，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,144,,,GF/DM,GP历史记录类别q=id/100==58，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,145,,,GF/DM,GP历史记录类别q=id/100==59，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,146,,,GF/DM,GP历史记录类别q=id/100==59，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,147,,,GF/DM,GP历史记录类别q=id/100==60，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,148,,,GF/DM,GP历史记录类别q=id/100==60，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,149,,,GF/DM,GP历史记录类别q=id/100==61，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,150,,,GF/DM,GP历史记录类别q=id/100==61，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,151,,,GF/DM,GP历史记录类别q=id/100==63，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,152,,,GF/DM,GP历史记录类别q=id/100==63，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,153,,,GF/DM,GP历史记录类别q=id/100==64，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,154,,,GF/DM,GP历史记录类别q=id/100==64，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,155,,,GF/DM,GP历史记录类别q=id/100==65，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,156,,,GF/DM,GP历史记录类别q=id/100==65，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,157,,,GF/DM,GP历史记录类别q=id/100==66，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,158,,,GF/DM,GP历史记录类别q=id/100==66，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,159,,,GF/DM,GP历史记录类别q=id/100==67，且id-q>0，排名字段+16==1（冠军）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,160,,,GF/DM,GP历史记录类别q=id/100==67，且id-q>0，排名字段+16在1..10（前10名）。,程序判定；大会名称见原图,,game.dll 0x100791E0
+V4,commemorative,161,,,GF/DM,服务器cs_syogo_state字段置位0x1。,程序判定＋协议字段,,game.dll 0x10078EF0
+V4,commemorative,162,,,GF/DM,服务器cs_syogo_state字段置位0x2。,程序判定＋协议字段,,game.dll 0x10078EF0
+V4,commemorative,163,,,GF/DM,服务器cs_syogo_state字段置位0x4。,程序判定＋协议字段,,game.dll 0x10078EF0
+V4,commemorative,164,,,GF/DM,服务器cs_syogo_state字段置位0x8。,程序判定＋协议字段,,game.dll 0x10078EF0
+V4,commemorative,165,,,GF/DM,服务器cs_syogo_state字段置位0x10。,程序判定＋协议字段,,game.dll 0x10078EF0
+V5,regular,0,,新 人,GF/DM,有效刷卡玩家进入称号计算即取得。,程序判定,,game.dll 0x1002C9A0
+V5,regular,1,,わ か ば,GF/DM,当局入门模式（game_mode==0）。,程序判定,,game.dll 0x1002BBB0 → 0x1002C9A0
+V5,regular,2,,仙 人,GF/DM,累计游玩次数≥1000。,程序判定,,game.dll 0x1002C9A0
+V5,regular,3,,SessionFreaks,GF/DM,累计Session次数≥30。,程序判定,,game.dll 0x1002C9A0
+V5,regular,4,,PERFECT Ⅶ Ⅲ 00a ⅳ 0,GF/DM,累计PERFECT判定数judge_perfect≥1000000（profile+0x114）。,程序判定,,game.dll 0x1002C9A0 / libshare-pj.dll 0x1001AA60
+V5,regular,5,,AII Rounder,GF/DM,all_play_mode字节==1（profile+0x110）；字段正式名已核准，其游戏模式覆盖范围需结合原提示图。,程序判定,,game.dll 0x1002C9A0 / libshare-pj.dll 0x1001AA60
+V5,regular,6,,,GF/DM,游玩店铺数play_shop_num≥2（profile+0x111）。,程序判定,,game.dll 0x1002C9A0 / libshare-pj.dll 0x1001AA60
+V5,regular,7,,風 来 坊,GF/DM,游玩店铺数play_shop_num≥5（profile+0x111）。,程序判定,,game.dll 0x1002C9A0 / libshare-pj.dll 0x1001AA60
+V5,regular,8,,CLEAR LEVEL ー,GF/DM,历史最高通关难度≥20。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,9,,CLEAR LEVEL,GF/DM,历史最高通关难度≥40。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,10,,CLEAR LEVELIII,GF/DM,历史最高通关难度≥60。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,11,,CLEAR LEVELIV,GF/DM,历史最高通关难度≥80。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,12,,CLEAR,GF/DM,历史最高通关难度≥99。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,13,,Guitarist,GF,GUITAR累计通关不同曲目≥300。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,14,,Bassist,GF,BASS累计通关不同曲目≥300。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,15,,0P0 れ picke,GF,OPENPICK累计通关不同曲目≥300。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,16,,Drummer,DM,DRUM累计通关不同曲目≥300。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,17,,EXCELLENT 大 納 言,GF/DM,当局至少一首EXCELLENT。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,18,,EXCELLENT 大 臣,GF/DM,当局至少一首EXCELLENT且难度≥40。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,19,,EXCELLENT 関 白,GF/DM,当局至少一首EXCELLENT且难度≥80。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,20,,FU し し COM80 侍,GF/DM,当局至少一首FULL COMBO。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,21,,FU し し COM80 奉 行,GF/DM,当局至少一首FULL COMBO且难度≥50。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,22,,F し し し COM80 将 軍,GF/DM,当局至少一首FULL COMBO且难度≥90。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,23,,F し し し COM80 部 隊,GF/DM,Session同曲至少2位参与者，所有参与者结果flag非0（FULL COMBO或EXCELLENT）。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,24,,EXCELLENT 部 隊,GF/DM,Session同曲至少2位参与者，所有参与者结果flag均非0且非1（EXCELLENT）。,程序判定,,game.dll 0x1002BBB0 → 0x1002CAE0
+V5,regular,25,,Head ⅱ れ 0,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1506。,程序判定,,game.dll 0x1002CAE0
+V5,regular,26,,Rock to lnfinity,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1520。,程序判定,,game.dll 0x1002CAE0
+V5,regular,27,,太 守,GF/DM,所有通常新曲各至少通关一个谱面；基于当前原生曲目表。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,28,,覇 王,GF/DM,所有有效曲目各至少通关一个谱面；基于当前原生曲目表。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,29,,殿 下,GF/DM,所有通常新曲全部有效谱面通关；基于当前原生曲目表。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,30,,天 帝,GF/DM,所有曲目全部有效谱面通关；基于当前原生曲目表。,程序判定,,game.dll 0x1002C140 → 0x1002CAE0
+V5,regular,31,,Memorial Train,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1131。,程序判定,,game.dll 0x1002CAE0
+V5,regular,32,,Memorial Live,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1213。,程序判定,,game.dll 0x1002CAE0
+V5,regular,33,,Memorial GaIaxy,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1302。,程序判定,,game.dll 0x1002CAE0
+V5,regular,34,,Memo 日 引 Rock,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1422。,程序判定,,game.dll 0x1002CAE0
+V5,regular,35,,Memo 日 引 A. 00G,GF/DM,通关当局第7号记录槽（即第8个槽位），曲目ID=1506。,程序判定,,game.dll 0x1002CAE0
+V5,regular,36,,,GF/DM,STEALTH=4通关曲目且原生AUTO限制通过：普通DM option+56==0、GF option+52==0；Battle GF分支额外使用option+44==1。,程序判定,,game.dll 0x1002BBB0 → 0x1002CE10
+V5,regular,37,,無 想,GF/DM,STEALTH=4通关难度≥50曲目且原生AUTO限制通过：普通DM option+56==0、GF option+52==0；Battle GF分支额外使用option+44==1。,程序判定,,game.dll 0x1002BBB0 → 0x1002CE10
+V5,regular,38,,心 眼,GF/DM,STEALTH=4通关难度≥90曲目且原生AUTO限制通过：普通DM option+56==0、GF option+52==0；Battle GF分支额外使用option+44==1。,程序判定,,game.dll 0x1002BBB0 → 0x1002CE10
+V5,regular,39,,大 和 魂,GF/DM,曲目ID1318且当局另一指定记录有效通关、双方难度字段均3、当前记录option+8>0；精确原始条件见伪码。,原始条件确定，组合玩法语义待补证,,game.dll 0x1002BBB0 → 0x1002CE10
+V5,regular,40,,ス ネ ー ク,GF/DM,STEALTH=4通关且RISKY字段option+48非零、相关AUTO字段为0。,程序判定,,game.dll 0x1002BBB0 → 0x1002CE10
+V5,regular,41,,,GF/DM,SKILL POINT≥200。,程序判定,,game.dll 0x1002CE90
+V5,regular,42,,,GF/DM,SKILL POINT≥400。,程序判定,,game.dll 0x1002CE90
+V5,regular,43,,初 段,GF/DM,SKILL POINT≥600。,程序判定,,game.dll 0x1002CE90
+V5,regular,44,,,GF/DM,SKILL POINT≥800。,程序判定,,game.dll 0x1002CE90
+V5,regular,45,,,GF/DM,SKILL POINT≥1000。,程序判定,,game.dll 0x1002CE90
+V5,regular,46,,四 段,GF/DM,SKILL POINT≥1100。,程序判定,,game.dll 0x1002CE90
+V5,regular,47,,五 段 ~,GF/DM,SKILL POINT≥1200。,程序判定,,game.dll 0x1002CE90
+V5,regular,48,,,GF/DM,SKILL POINT≥1300。,程序判定,,game.dll 0x1002CE90
+V5,regular,49,,免 許 皆 伝,GF/DM,SKILL POINT≥1400。,程序判定,,game.dll 0x1002CE90
+V5,regular,50,,,GF/DM,SKILL POINT≥1500。,程序判定,,game.dll 0x1002CE90
+V5,regular,51,,,GF/DM,BATTLE累计胜利数≥50。,程序判定,,game.dll 0x1002CFA0
+V5,regular,52,,孱 将,GF/DM,BATTLE累计胜利数≥100。,程序判定,,game.dll 0x1002CFA0
+V5,regular,53,,英 雄,GF/DM,BATTLE累计胜利数≥300。,程序判定,,game.dll 0x1002CFA0
+V5,regular,54,,戦 神,GF/DM,BATTLE累计胜利数≥500。,程序判定,,game.dll 0x1002CFA0
+V5,regular,55,,神 持,GF/DM,BATTLE累计胜利数≥1000。,程序判定,,game.dll 0x1002CFA0
+V5,regular,56,,常 勝 戦 記,GF/DM,BATTLE连胜计数≥5。,程序判定,,game.dll 0x1002CFA0
+V5,regular,57,,不 敗 神 話,GF/DM,SS级10连胜达成锁存标志word==1；生产端将打包对战资料+146的连胜字段与10比较，再保留历史达成位。,程序判定,,game.dll 0x1007F7F0 → 0x100BD420 → 0x1002CFA0
+V5,regular,58,,番 兵,GF/DM,网络BATTLE胜利且对手战绩连续胜利字段≥4。,程序判定,,game.dll 0x1002CFA0
+V5,regular,59,,守 護 神,GF/DM,网络BATTLE胜利且对手战绩连续胜利字段≥9。,程序判定,,game.dll 0x1002CFA0
+V5,regular,60,,ト リ ッ ク ス タ ー,GF/DM,BATTLE字段0x105B37EC≥50；字段生产者仍需追踪。,原始条件确定，字段语义待补证,,game.dll 0x1002CFA0
+V5,regular,61,,平 成 の 名 勝 負,GF/DM,"BATTLE三种模式(3/4/5)中某一战，本方和对方两个累计字段和的差在[-2000,+2000]。",数值条件确定，字段语义待补证,,game.dll 0x1002CFA0
+V5,regular,62,,ニ 人 の シ - ズ ン,GF/DM,网络BATTLE双方打包资料低14位相同：(self XOR opponent)&0x3FFF==0。,位条件确定，字段语义待补证,,game.dll 0x1002CFA0
+V5,regular,63,,バ ー フ ェ ク ト ゲ ー ム,GF/DM,BATTLE中本人两项外观/选择字段均非零（原始player对应两个256字节块的首标志）。,原始条件确定，字段语义待补证,,game.dll 0x1002CFA0
+V5,regular,64,,,GF/DM,BATTLE击败强敌累计字段≥10。,程序判定,,game.dll 0x1002CFA0
+V5,regular,65,,BATTLE MASTER,GF/DM,BATTLE RATING原始值≥140000（1400.00）。,程序判定,,game.dll 0x1002CFA0
+V5,regular,66,,BATTLE KING,GF/DM,BATTLE RATING原始值≥151000（1510.00）。,程序判定,,game.dll 0x1002CFA0
+V5,regular,67,,GP LEVEL—I,GF/DM,Grand Prix参与标志byte_1058CC2C!=0。,程序判定,,game.dll 0x1002D4B0
+V5,regular,68,,GP LEVEL—,GF/DM,Grand Prix累计积分字段≥500。,程序判定,,game.dll 0x1002D4B0
+V5,regular,69,,GP LEVEL— 川,GF/DM,Grand Prix累计积分字段≥1000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,70,,GP LEVEL— Ⅳ,GF/DM,Grand Prix累计积分字段≥2000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,71,,GP LEVEL—V,GF/DM,Grand Prix累计积分字段≥3000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,72,,GP LEVEL—VI,GF/DM,Grand Prix累计积分字段≥4500。,程序判定,,game.dll 0x1002D4B0
+V5,regular,73,,GP LEVEL—VII,GF/DM,Grand Prix累计积分字段≥6000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,74,,GP LEVEL—VIII,GF/DM,Grand Prix累计积分字段≥8000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,75,,GP LEVEL— Ⅸ,GF/DM,Grand Prix累计积分字段≥10000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,76,,GPMASTER,GF/DM,Grand Prix累计积分字段≥12500。,程序判定,,game.dll 0x1002D4B0
+V5,regular,77,,GP G A 物 0 MASTER,GF/DM,Grand Prix累计积分字段≥15000。,程序判定,,game.dll 0x1002D4B0
+V5,regular,78,,,GF/DM,RANDOM抽中曲目ID=811；不额外要求通关。,程序判定,,game.dll 0x1002C830 → 0x1002D640
+V5,regular,79,,Happy man,GF/DM,RANDOM抽中曲目ID=5；不额外要求通关。,程序判定,,game.dll 0x1002C830 → 0x1002D640
+V5,regular,80,,LUCKY? STAFF,GF/DM,RANDOM抽中曲目ID=208；不额外要求通关。,程序判定,,game.dll 0x1002C830 → 0x1002D640
+V5,regular,81,,セ 福 神,GF/DM,RANDOM抽中曲目ID=1307；不额外要求通关。,程序判定,,game.dll 0x1002C830 → 0x1002D640
+V5,regular,82,,大 凶,GF/DM,RANDOM抽中曲目，且当局played记录存在同曲难度≥99的谱面；不额外要求clear。,程序判定,,game.dll 0x1002C830 → 0x1002D640
+V5,regular,83,,抽 選 王,GF/DM,当局随机抽选记录数量>0且扫描到至少一项；不额外要求random_selected或通关。,程序判定,,game.dll 0x1002C830 → 0x1002D640
+V5,regular,84,,抽 選 大 王,GF/DM,网络BATTLE双方的特殊标志0x80000均未设置、双方称号字段均为83或84、双方标志0x2000000均设置。,位条件确定，字段完整语义待补证,,game.dll 0x1002CFA0
+V5,regular,85,,Legend ofIZUMI,GF/DM,"同一局通关全部曲目ID：5, 115, 901, 1501；扫描8条记录，played及clear均非零，顺序不限。",程序判定,5: HAPPY MAN / 115: WANNA BE YOUR B / 901: HONOLULU LOCO B / 1501: ELECTRIC LADY,game.dll 0x1002DBC0 / 0x100d3bc0
+V5,regular,86,,超 ・ 親 分,GF/DM,"同一局通关全部曲目ID：805, 1308, 1408, 1507；扫描8条记录，played及clear均非零，顺序不限。",程序判定,805: MANGEKYO / 1308: MIRAGE RESIDENC / 1408: ZIGZAG LIFE / 1507: TENGU,game.dll 0x1002DBC0 / 0x100d3bd4
+V5,regular,87,,メ ガ ネ ア フ ロ,GF/DM,"同一局通关全部曲目ID：1223, 1325, 1413, 1511；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1223: HONGKONG / 1325: MODORANAI KOI / 1413: SAYONARADAYORI / 1511: MANATSUNOKOIWAC,game.dll 0x1002DBC0 / 0x100d3be8
+V5,regular,88,,Kozo 検 定 初 段 合 格 者,GF/DM,"同一局通关全部曲目ID：515, 613, 808, 1109；扫描8条记录，played及clear均非零，顺序不限。",程序判定,515: BLIND / 613: ROCKIN' PARADIS / 808: COUNTRY DAY / 1109: DESERT ROSE,game.dll 0x1002DBC0 / 0x100d3bfc
+V5,regular,89,,シ ョ ン ポ リ 委 員 会,GF/DM,"同一局通关全部曲目ID：402, 516, 955, 1115；扫描8条记录，played及clear均非零，顺序不限。",程序判定,402: SILLY GIRL / 516: KIMINO TONARINI / 955: JUN BEN KA / 1115: AISYUU NO KORIG,game.dll 0x1002DBC0 / 0x100d3c10
+V5,regular,90,,M r. ば ん べ い ゆ,GF/DM,"同一局通关全部曲目ID：1405, 1503, 1504, 1505；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1405: KYOKUTO SHIKI / 1503: ATOMS / 1504: MANNEQUIN / 1505: RYU HYO NO SARI,game.dll 0x1002DBC0 / 0x100d3c24
+V5,regular,91,,元 üTOMOSUKE 本,GF/DM,"同一局通关全部曲目ID：301, 501, 710, 1114；扫描8条记录，played及clear均非零，顺序不限。",程序判定,301: FURI FURI'60 / 501: BRAZILIAN ANTHE / 710: INFINITE / 1114: FLOW,game.dll 0x1002DBC0 / 0x100d3c38
+V5,regular,92,,仁 倶 楽 部 壱 号,GF/DM,"同一局通关全部曲目ID：1314, 1420, 1421, 1518；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1314: AXIS / 1420: FIRST DATE / 1421: RAINING SUNSHIN / 1518: OPUS LIFE,game.dll 0x1002DBC0 / 0x100d3c4c
+V5,regular,93,,96 ち ゃ ん 大 王,GF/DM,"同一局通关全部曲目ID：1422, 1423, 1523, 1525；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1422: ICHIMOUDAJIN / 1423: INSIDE-OUT / 1523: FAR BEYOND BLAC / 1525: HITORI ASOBI,game.dll 0x1002DBC0 / 0x100d3c60
+V5,regular,94,,00S ・ ラ ー 軍 団,GF/DM,"同一局通关全部曲目ID：836, 1221, 1319, 1513；扫描8条记录，played及clear均非零，顺序不限。",程序判定,836: DAIKENKAI / 1221: SHINKOFUKATION / 1319: SAMURAI / 1513: FUSIGIDANIPPON,game.dll 0x1002DBC0 / 0x100d3c74
+V5,regular,95,,平 成 の ビ ア ニ ス ト,GF/DM,"同一局通关全部曲目ID：403, 504, 619, 920；扫描8条记录，played及clear均非零，顺序不限。",程序判定,403: THE LEAST 100SE / 504: KODOMONO RAKUGA / 619: CONCERTINO IN B / 920: TIMEPIECE PHASE,game.dll 0x1002DBC0 / 0x100d3c88
+V5,regular,96,,BRASS FAMILY,GF/DM,"同一局通关全部曲目ID：16, 611, 1124, 1508；扫描8条记录，played及clear均非零，顺序不限。",程序判定,16: HEAVEN IS A 57 / 611: DOUBLE TROUBLE / 1124: HEAVENS COCKTAI / 1508: MUDAI,game.dll 0x1002DBC0 / 0x100d3c9c
+V5,regular,97,,鏡 花 水 月 楼,GF/DM,"同一局通关全部曲目ID：1129, 1317, 1414, 1512；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1129: ESCAPE TO THE S / 1317: ZE NITH / 1414: REVOLUTION / 1512: KYOUKA SUIGETSU,game.dll 0x1002DBC0 / 0x100d3cb0
+V5,regular,98,,王 RSAPPHIRE,GF/DM,"同一局通关全部曲目ID：304, 605, 1311, 1463；扫描8条记录，played及clear均非零，顺序不限。",程序判定,304: NA NA NA / 605: DREAM RUSH / 1311: BITTERSWEET / 1463: TEARS OF HAPPIN,game.dll 0x1002DBC0 / 0x100d3cc4
+V5,regular,99,,ち ら ち ら し 0 ” ☆,GF/DM,"同一局通关全部曲目ID：413, 609, 837, 967；扫描8条记录，played及clear均非零，顺序不限。",程序判定,413: ARIGATONE. / 609: SUIMAAZU / 837: RINGO TO HACHIM / 967: WARUAGAKI,game.dll 0x1002DBC0 / 0x100d3cd8
+V5,regular,100,,SPACE FUSION,GF/DM,"同一局通关全部曲目ID：512, 815, 958, 1460；扫描8条记录，played及clear均非零，顺序不限。",程序判定,512: FEEL THE EARTH / 815: GET READY / 958: A SHOOTING STAR / 1460: TABIDACHI,game.dll 0x1002DBC0 / 0x100d3cec
+V5,regular,101,,涙 の reg 「 et,GF/DM,"同一局通关全部曲目ID：801, 903, 1001, 1200；扫描8条记录，played及clear均非零，顺序不限。",程序判定,801: NAMIDA NO REGRE / 903: SUISHO / 1001: MY FRIEND / 1200: BE PROUD,game.dll 0x1002DBC0 / 0x100d3d00
+V5,regular,102,,DANDY VOICE,GF/DM,"同一局通关全部曲目ID：1018, 1106, 1411, 1427；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1018: DEDICATION / 1106: YOULL BE A MAN / 1411: CHARISMATIC / 1427: TRUE LOVE AND V,game.dll 0x1002DBC0 / 0x100d3d14
+V5,regular,103,,,GF/DM,"同一局通关全部曲目ID：111, 1210, 1316, 1413；扫描8条记录，played及clear均非零，顺序不限。",程序判定,111: PPR / 1210: JJ ROAD / 1316: GUITAR DRIVE / 1413: SAYONARADAYORI,game.dll 0x1002DBC0 / 0x100d3d28
+V5,regular,104,,TAG ド ラ ド,GF/DM,"同一局通关全部曲目ID：1313, 1416, 1521；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1313: EL DORADO / 1416: PRIME LIGHT / 1521: PIECE OF HISTOR,game.dll 0x1002DBC0 / 0x100d3d3c
+V5,regular,105,,V0200000000000,GF/DM,VOIDDD累计游玩次数voiddd_play_cnt≥10（profile+0x118）；阈值检查历史计数，不额外要求当局通关。,程序判定,,game.dll 0x1002D6E0 / libshare-pj.dll 0x1001AA60
+V5,regular,106,,つ つ ば り,GF/DM,"同一局通关全部曲目ID：705, 951, 1528；扫描8条记录，played及clear均非零，顺序不限。",程序判定,705: KEIKO MY LOVE / 951: BARIBARI BUGI / 1528: TANBO NO TA,game.dll 0x1002DBC0 / 0x100d3d50
+V5,regular,107,,花 鳥 風 月,GF/DM,"同一局通关全部曲目ID：803, 804, 910, 1236；扫描8条记录，played及clear均非零，顺序不限。",程序判定,803: GEKKOUCHOU / 804: HANANO UTA / 910: KAGONOTORI / 1236: MINAMIKAZE,game.dll 0x1002DBC0 / 0x100d3d64
+V5,regular,108,,百 花 線 乱,GF/DM,"同一局通关全部曲目ID：403, 1326, 1530；扫描8条记录，played及clear均非零，顺序不限。",程序判定,403: THE LEAST 100SE / 1326: RYORAN HITCHART / 1530: RINTOSITESAKUHA,game.dll 0x1002DBC0 / 0x100d3d78
+V5,regular,109,,メ ガ ネ 男 子,GF/DM,"同一局通关全部曲目ID：967, 1325, 1326, 1540；扫描8条记录，played及clear均非零，顺序不限。",程序判定,967: WARUAGAKI / 1325: MODORANAI KOI / 1326: RYORAN HITCHART / 1540: SHANGRILA,game.dll 0x1002DBC0 / 0x100d3d8c
+V5,regular,110,,セ ー ラ ー 女 子,GF/DM,"同一局通关全部曲目ID：607, 1445, 1519, 1528；扫描8条记录，played及clear均非零，顺序不限。",程序判定,607: SMILE FOR YOU / 1445: ENRAI / 1519: COLORFUL PASTEL / 1528: TANBO NO TA,game.dll 0x1002DBC0 / 0x100d3da0
+V5,regular,111,,連 転 免 許 証,GF/DM,"同一局通关全部曲目ID：612, 900, 1210, 1429；扫描8条记录，played及clear均非零，顺序不限。",程序判定,612: WILD RIDE / 900: RPMRED / 1210: JJ ROAD / 1429: TAIYO,game.dll 0x1002DBC0 / 0x100d3db4
+V5,regular,112,,飛 行 機 免 許 証,GF/DM,"同一局通关全部曲目ID：806, 1204, 1441, 1516；扫描8条记录，played及clear均非零，顺序不限。",程序判定,806: IMPULSE OF BLUE / 1204: SAISOKUTOUHIKOU / 1441: GARANA / 1516: HIKOKI,game.dll 0x1002DBC0 / 0x100d3dc8
+V5,regular,113,,ネ コ ス キ ー,GF/DM,"同一局通关全部曲目ID：712, 717, 1113, 1427；扫描8条记录，played及clear均非零，顺序不限。",程序判定,712: SWEET FELINE / 717: MIKENEKO ROKKU / 1113: NYANDAFUL GO GO / 1427: TRUE LOVE AND V,game.dll 0x1002DBC0 / 0x100d3ddc
+V5,regular,114,,イ ヌ ス キ ー,GF/DM,"同一局通关全部曲目ID：405, 513, 514, 807；扫描8条记录，played及clear均非零，顺序不限。",程序判定,405: CASSANDRA / 513: FIREBALL / 514: SEIRON / 807: UTOPIA,game.dll 0x1002DBC0 / 0x100d3df0
+V5,regular,115,,世 界 制 新,GF/DM,"同一局通关全部曲目ID：21, 626, 917, 1541；扫描8条记录，played及clear均非零，顺序不限。",程序判定,21: JET WORLD / 626: INNOCENT WORLD / 917: FUNKY SONIC WOR / 1541: THE WORLD,game.dll 0x1002DBC0 / 0x100d3e04
+V5,regular,116,,,GF/DM,"同一局通关全部曲目ID：614, 1000, 1203, 1403；扫描8条记录，played及clear均非零，顺序不限。",程序判定,614: DARE / 1000: YARA TUM KAHAN / 1203: MAGIC WORDS / 1403: HOW DO YOU FEEL,game.dll 0x1002DBC0 / 0x100d3e18
+V5,regular,117,,,GF/DM,"同一局通关全部曲目ID：1243, 1319, 1334, 1431；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1243: LOLITA LETS GO / 1319: SAMURAI / 1334: NAGISANO GO-GO / 1431: STRIKE PARTY,game.dll 0x1002DBC0 / 0x100d3e2c
+V5,regular,118,,,GF/DM,"同一局通关全部曲目ID：1017, 1107, 1223, 1511；扫描8条记录，played及clear均非零，顺序不限。",程序判定,1017: SHINING / 1107: DOKIDOKI / 1223: HONGKONG / 1511: MANATSUNOKOIWAC,game.dll 0x1002DBC0 / 0x100d3e40
+V5,regular,119,,TrickTraP,GF/DM,3人Session均有效且对应失败状态均0，某有效已通关曲目为810/1120/1310之一；三人character ID集合包含85/88/98。,程序判定,,game.dll 0x1002B590
+V5,regular,120,,p-Bombers,GF/DM,3人Session均有效且对应失败状态均0，某有效已通关曲目为1130/1462之一；三人character ID集合包含86/88/98。,程序判定,,game.dll 0x1002B590
+V5,regular,121,,s-Dynamites,GF/DM,3人Session均有效且对应失败状态均0，某有效已通关曲目为1132；三人character ID集合包含85/87/89。,程序判定,,game.dll 0x1002B590
+V5,regular,122,,わ ん に ゃ ん ☆ バ ニ ッ ク ス,GF/DM,3人Session均有效且对应失败状态均0，某有效已通关曲目为1131；三人character ID集合包含90/91/96。,程序判定,,game.dll 0x1002B590
+V5,regular,123,,引 3 レ デ ィ,GF/DM,任一已通关阶段的判定值==573；角色ID须为3/4/8/10/12/14之一，GF另允许角色0。该573值字段语义待补证。,原始条件确定，字段语义待补证,,game.dll 0x1002BBB0 → 0x1002D6E0
+V5,regular,124,,573 レ デ ィ ー ス,GF/DM,Session至少2位参与者且所有参与者刷卡、失败状态==0、角色ID为123或124；Session阶段值==573。,原始条件确定，573字段语义待补证,,game.dll 0x1002B890 → 0x1002BBB0 → 0x1002D6E0
+V5,regular,125,,PREMIUM MEMBER,GF/DM,已通关阶段option首DWORD包含bit0及bit1，且option+4==2。,原始条件确定，选项释义待补证,,game.dll 0x1002BBB0 → 0x1002D6E0
+V5,regular,126,,繋 ぎ 屋,GF/DM,累计FULL COMBO不同曲目≥300。,程序判定,,game.dll 0x1002C140 → 0x1002D6E0
+V5,regular,127,,神 の 手,GF/DM,累计EXCELLENT不同曲目：GF≥300、DM≥200。,程序判定,,game.dll 0x1002C140 → 0x1002D6E0
+V5,regular,128,,B P M 5 7 3 マ ン,GF/DM,当局8个played槽的指定整数值累加后==573：有双值时先取二者整数平均，没有第二值时用第一值；不额外要求clear。,原始条件确定，计分字段语义待补证,,game.dll 0x1002D6E0
+V5,regular,129,,Master of Meisters,GF/DM,匠资料有效且四项meister等级字段均==6。,程序判定,,game.dll 0x1002DB50
+V5,regular,130,,目 利 き,GF/DM,持有ID124..174范围内的道具数≥10。,程序判定,,game.dll 0x1002D6E0
+V5,regular,131,,趣 味 人,GF/DM,持有ID124..174范围内的道具数≥30。,程序判定,,game.dll 0x1002D6E0
+V5,regular,132,,数 奇 者,GF/DM,持有适用当前GF/DM的道具且类别为5或6，数量≥5。,程序判定,,game.dll 0x1002D6E0
+V5,regular,133,,お 得 意 様,GF/DM,持有记录中“已装备/使用”标志非零的道具数量≥10（实际字段player item+9）。,数值确定；道具标志语义待补证,,game.dll 0x1002D6E0
+V5,regular,134,,ITEM COLLECTOR,GF/DM,持有道具总数≥100。,程序判定,,game.dll 0x1002D6E0
+V5,commemorative,1000,0,,unverified,服务器活动位字段包含0x10；客户端没有直接比较本机日期。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1001,1,,unverified,BATTLE对手打包数据0x80000位设置，且其称号编号为0或1。,程序判定,,game.dll 0x1002CFA0
+V5,commemorative,1002,2,,unverified,服务器活动位包含0x20且本轮played记录包含曲目ID=709，不要求clear。,程序判定,,game.dll 0x1002DE00
+V5,commemorative,1003,3,,unverified,服务器活动位字段包含0x2；客户端没有直接比较本机日期。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1004,4,,unverified,服务器活动位包含0x4且本轮played记录包含曲目ID=1108，不要求clear。,程序判定,,game.dll 0x1002DE00
+V5,commemorative,1005,5,,unverified,服务器活动位字段包含0x8；客户端没有直接比较本机日期。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1006,6,,unverified,服务器活动位字段包含0x1；客户端没有直接比较本机日期。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1007,7,,unverified,BATTLE对手打包数据工作人员位0x200000设置。,程序判定,,game.dll 0x1002CFA0
+V5,commemorative,1008,8,,unverified,BATTLE对应对手记录首字节==1；该标志正式语义尚未闭合。,原始条件确定，字段语义待补证,,game.dll 0x1002CFA0
+V5,commemorative,1009,9,,unverified,本轮普通授予入口及直接子函数未发现新增该编号的分支；可从服务端已有badge列表继承。,已获可继承；新授予来源未闭合,,game.dll 0x1002B110
+V5,commemorative,1010,10,,unverified,BATTLE STONE EVENT：season==1，stone_round≥3，第三轮stone_bit[3]==31。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1011,11,,unverified,BATTLE STONE EVENT：season==2，stone_round≥3，第三轮stone_bit[3]==31。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1012,12,,unverified,上代实绩奖励bit1；构造条件为working+2688整数≥150000。该历史值正式语义待补证。,原始条件确定，历史字段语义待补证,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1013,13,,unverified,V4累计宝石v4_total_stone≥100（profile+284的WORD）。,程序判定,,game.dll 0x1002B110 → 0x1002DE00 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1014,14,,unverified,V4 Grand Champion标志is_v4_grand_champion==1（profile+292）。,程序判定,,game.dll 0x1002B110 → 0x1002DE00 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1015,15,,unverified,V4累计Grand Prix积分v4_total_gp_point≥50000（profile+288）。,程序判定,,game.dll 0x1002B110 → 0x1002DE00 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1016,16,,unverified,服务器历史topranker字节(profile+266)包含0x1；不在本机重新判定旧大会排名。,程序判定,,game.dll 0x1002B110 → 0x1002DE00 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1017,17,,unverified,服务器历史topranker字节(profile+266)包含0x2；不在本机重新判定旧大会排名。,程序判定,,game.dll 0x1002B110 → 0x1002DE00 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1018,18,,unverified,历史资料working+2684的整数≥0；客户端据此构造历史资料存在位。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1019,19,,unverified,历史资料working+2688的整数≥0；客户端据此构造历史资料存在位。,程序判定,,game.dll 0x1002B110 → 0x1002DE00
+V5,commemorative,1020,20,,unverified,收齐本机种的全部普通称号：GF≥134个、DM≥132个；不要求纪念称号全收集。,程序判定,,game.dll 0x1002B370
+V5,commemorative,1021,21,,unverified,Grand Prix积分排名gp_point_rank的第1个DWORD==1（profile+0x128）。,排名数值确定；两个排名列表的对应范围待补证,,game.dll 0x1002D4B0 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1022,22,,unverified,Grand Prix积分排名gp_point_rank的第2个DWORD==1（profile+0x12C）。,排名数值确定；两个排名列表的对应范围待补证,,game.dll 0x1002D4B0 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1023,23,,unverified,Grand Prix积分排名gp_point_rank的第1个DWORD在1..10（profile+0x128）。,排名数值确定；两个排名列表的对应范围待补证,,game.dll 0x1002D4B0 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1024,24,,unverified,Grand Prix积分排名gp_point_rank的第2个DWORD在1..10（profile+0x12C）。,排名数值确定；两个排名列表的对应范围待补证,,game.dll 0x1002D4B0 / libshare-pj.dll 0x1001AA60
+V5,commemorative,1025,25,,unverified,Grand Prix任一有效大会记录：rank在1..10且record.type==1；另存在大会46/47对应rank在1..10路径，以及profile+0x38非零且扫描到对应大会的路径，详见原始伪码。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1026,26,,unverified,Grand Prix任一有效大会记录：rank在1..10且record.type==2；另存在大会46/47对应rank在1..10路径，以及profile+0x38非零且扫描到对应大会的路径，详见原始伪码。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1027,27,,unverified,Grand Prix大会类别整数record.id/100==44且rank==1。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1028,28,,unverified,Grand Prix大会类别整数record.id/100==45且rank==1。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1029,29,,unverified,Grand Prix大会类别整数record.id/100==44且rank>0。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1030,30,,unverified,Grand Prix大会类别整数record.id/100==45且rank>0。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1031,31,,unverified,Grand Prix有效大会记录整数record.id/100==1，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1032,32,,unverified,Grand Prix有效大会记录整数record.id/100==1，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1033,33,,unverified,Grand Prix有效大会记录整数record.id/100==2，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1034,34,,unverified,Grand Prix有效大会记录整数record.id/100==2，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1035,35,,unverified,Grand Prix有效大会记录整数record.id/100==3，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1036,36,,unverified,Grand Prix有效大会记录整数record.id/100==3，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1037,37,,unverified,Grand Prix有效大会记录整数record.id/100==4，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1038,38,,unverified,Grand Prix有效大会记录整数record.id/100==4，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1039,39,,unverified,Grand Prix有效大会记录整数record.id/100==5，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1040,40,,unverified,Grand Prix有效大会记录整数record.id/100==5，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1041,41,,unverified,Grand Prix有效大会记录整数record.id/100==6，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1042,42,,unverified,Grand Prix有效大会记录整数record.id/100==6，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1043,43,,unverified,Grand Prix有效大会记录整数record.id/100==7，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1044,44,,unverified,Grand Prix有效大会记录整数record.id/100==7，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1045,45,,unverified,Grand Prix有效大会记录整数record.id/100==8，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1046,46,,unverified,Grand Prix有效大会记录整数record.id/100==8，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1047,47,,unverified,Grand Prix有效大会记录整数record.id/100==9，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1048,48,,unverified,Grand Prix有效大会记录整数record.id/100==9，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1049,49,,unverified,Grand Prix有效大会记录整数record.id/100==10，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1050,50,,unverified,Grand Prix有效大会记录整数record.id/100==10，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1051,51,,unverified,Grand Prix有效大会记录整数record.id/100==11，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1052,52,,unverified,Grand Prix有效大会记录整数record.id/100==11，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1053,53,,unverified,Grand Prix有效大会记录整数record.id/100==12，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1054,54,,unverified,Grand Prix有效大会记录整数record.id/100==12，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1055,55,,unverified,Grand Prix有效大会记录整数record.id/100==13，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1056,56,,unverified,Grand Prix有效大会记录整数record.id/100==13，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1057,57,,unverified,Grand Prix有效大会记录整数record.id/100==14，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1058,58,,unverified,Grand Prix有效大会记录整数record.id/100==14，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1059,59,,unverified,Grand Prix有效大会记录整数record.id/100==15，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1060,60,,unverified,Grand Prix有效大会记录整数record.id/100==15，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1061,61,,unverified,Grand Prix有效大会记录整数record.id/100==16，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1062,62,,unverified,Grand Prix有效大会记录整数record.id/100==16，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1063,63,,unverified,Grand Prix有效大会记录整数record.id/100==17，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1064,64,,unverified,Grand Prix有效大会记录整数record.id/100==17，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1065,65,,unverified,Grand Prix有效大会记录整数record.id/100==18，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1066,66,,unverified,Grand Prix有效大会记录整数record.id/100==18，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1067,67,,unverified,Grand Prix有效大会记录整数record.id/100==19，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1068,68,,unverified,Grand Prix有效大会记录整数record.id/100==19，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1069,69,,unverified,Grand Prix有效大会记录整数record.id/100==20，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1070,70,,unverified,Grand Prix有效大会记录整数record.id/100==20，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1071,71,,unverified,Grand Prix有效大会记录整数record.id/100==21，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1072,72,,unverified,Grand Prix有效大会记录整数record.id/100==21，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1073,73,,unverified,Grand Prix有效大会记录整数record.id/100==22，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1074,74,,unverified,Grand Prix有效大会记录整数record.id/100==22，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1075,75,,unverified,Grand Prix有效大会记录整数record.id/100==23，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1076,76,,unverified,Grand Prix有效大会记录整数record.id/100==23，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1077,77,,unverified,Grand Prix有效大会记录整数record.id/100==24，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1078,78,,unverified,Grand Prix有效大会记录整数record.id/100==24，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1079,79,,unverified,Grand Prix有效大会记录整数record.id/100==25，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1080,80,,unverified,Grand Prix有效大会记录整数record.id/100==25，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1081,81,,unverified,Grand Prix有效大会记录整数record.id/100==26，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1082,82,,unverified,Grand Prix有效大会记录整数record.id/100==26，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1083,83,,unverified,Grand Prix有效大会记录整数record.id/100==27，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1084,84,,unverified,Grand Prix有效大会记录整数record.id/100==27，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1085,85,,unverified,Grand Prix有效大会记录整数record.id/100==28，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1086,86,,unverified,Grand Prix有效大会记录整数record.id/100==28，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1087,87,,unverified,Grand Prix有效大会记录整数record.id/100==29，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1088,88,,unverified,Grand Prix有效大会记录整数record.id/100==29，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1089,89,,unverified,Grand Prix有效大会记录整数record.id/100==30，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1090,90,,unverified,Grand Prix有效大会记录整数record.id/100==30，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1091,91,,unverified,Grand Prix有效大会记录整数record.id/100==31，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1092,92,,unverified,Grand Prix有效大会记录整数record.id/100==31，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1093,93,,unverified,Grand Prix有效大会记录整数record.id/100==32，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1094,94,,unverified,Grand Prix有效大会记录整数record.id/100==32，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1095,95,,unverified,Grand Prix有效大会记录整数record.id/100==33，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1096,96,,unverified,Grand Prix有效大会记录整数record.id/100==33，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1097,97,,unverified,Grand Prix有效大会记录整数record.id/100==34，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1098,98,,unverified,Grand Prix有效大会记录整数record.id/100==34，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1099,99,,unverified,Grand Prix有效大会记录整数record.id/100==35，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1100,100,,unverified,Grand Prix有效大会记录整数record.id/100==35，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1101,101,,unverified,Grand Prix有效大会记录整数record.id/100==36，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1102,102,,unverified,Grand Prix有效大会记录整数record.id/100==36，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1103,103,,unverified,Grand Prix有效大会记录整数record.id/100==37，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1104,104,,unverified,Grand Prix有效大会记录整数record.id/100==37，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1105,105,,unverified,Grand Prix有效大会记录整数record.id/100==38，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1106,106,,unverified,Grand Prix有效大会记录整数record.id/100==38，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1107,107,,unverified,Grand Prix有效大会记录整数record.id/100==39，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1108,108,,unverified,Grand Prix有效大会记录整数record.id/100==39，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1109,109,,unverified,Grand Prix有效大会记录整数record.id/100==40，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1110,110,,unverified,Grand Prix有效大会记录整数record.id/100==40，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1111,111,,unverified,Grand Prix有效大会记录整数record.id/100==41，rank==1；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1112,112,,unverified,Grand Prix有效大会记录整数record.id/100==41，rank在1..10；扫描250项28字节记录。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1113,113,,unverified,Grand Prix大会记录整数record.id/100==46且rank==1。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1114,114,,unverified,Grand Prix大会记录整数record.id/100==46且rank在1..10。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1115,115,,unverified,Grand Prix大会记录整数record.id/100==47且rank==1。,程序判定,,game.dll 0x1002E1B0
+V5,commemorative,1116,116,,unverified,Grand Prix大会记录整数record.id/100==47且rank在1..10。,程序判定,,game.dll 0x1002E1B0
+V6,regular,0,,新人,GF/DM,使用e-AMUSEMENT PASS游玩；有效玩家进入称号计算时无额外门槛。,程序判定,,game.dll 0x1002AB60
+V6,regular,1,,わかば,GF/DM,当局进入入门模式（game_mode==0）。,程序判定,,game.dll 0x10029CB0 → 0x1002AB60
+V6,regular,2,,仙人,GF/DM,累计游玩次数达到1000。,程序判定,,game.dll 0x1002AB60
+V6,regular,3,,SessionFreaks,GF/DM,累计Session游玩次数达到30。,程序判定,,game.dll 0x1002AB60
+V6,regular,4,,流し,GF/DM,游玩店铺数play_shop_num达到2（profile+0x136）。,程序判定,,game.dll 0x1002AB60 / libshare-pj.dll 0x1001BB30
+V6,regular,5,,風来坊,GF/DM,游玩店铺数play_shop_num达到5（profile+0x136）。,程序判定,,game.dll 0x1002AB60 / libshare-pj.dll 0x1001BB30
+V6,regular,6,,Guitarist,GF,GUITAR累计通关不同曲目达到300；同曲多个难度按一曲计。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,7,,Bassist,GF,BASS累计通关不同曲目达到300；同曲多个难度按一曲计。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,8,,Openpicker,GF,OPENPICK累计通关不同曲目达到300；同曲多个难度按一曲计。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,9,,Drummer,DM,DRUM累计通关不同曲目达到300；同曲多个难度按一曲计。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,10,,EXC ACHIEVER,GF/DM,当局已通关记录中，至少一首EXCELLENT。,程序判定,,game.dll 0x10029CB0 → 0x1002AC50
+V6,regular,11,,EXC EXPERT,GF/DM,当局已通关记录中，至少一首EXCELLENT且难度≥40。,程序判定,,game.dll 0x10029CB0 → 0x1002AC50
+V6,regular,12,,EXC MASTER,GF/DM,当局已通关记录中，至少一首EXCELLENT且难度≥80。,程序判定,,game.dll 0x10029CB0 → 0x1002AC50
+V6,regular,13,,FC ACHIEVER,GF/DM,当局已通关记录中，至少一首FULL COMBO。,程序判定,,game.dll 0x10029CB0 → 0x1002AC50
+V6,regular,14,,FC EXPERT,GF/DM,当局已通关记录中，至少一首FULL COMBO且难度≥50。,程序判定,,game.dll 0x10029CB0 → 0x1002AC50
+V6,regular,15,,FC MASTER,GF/DM,当局已通关记录中，至少一首FULL COMBO且难度≥90。,程序判定,,game.dll 0x10029CB0 → 0x1002AC50
+V6,regular,16,,BLAZING!!!!,GF/DM,通关当局第8个记录槽的BLAZING STAGE，曲目ID=1650；该槽的played及clear标志均非零。,程序判定,,game.dll 0x1002AC50
+V6,regular,17,,小覇王,GF/DM,所有通常新曲各至少通关一个谱面；判定范围由当前原生曲目表及曲目可用标志决定。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,18,,覇王,GF/DM,所有有效曲目各至少通关一个谱面；判定范围由当前原生曲目表及曲目可用标志决定。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,19,,皇帝,GF/DM,所有通常新曲的所有有效谱面全部通关；判定范围由当前原生曲目表及曲目可用标志决定。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,20,,天帝,GF/DM,所有有效曲目的所有有效谱面全部通关；判定范围由当前原生曲目表及曲目可用标志决定。,程序判定,,game.dll 0x1002A300 → 0x1002AC50
+V6,regular,21,,覚醒,GF/DM,STEALTH选项=4通关曲目，且相关AUTO字段须满足原生限制；普通模式DM检查option+56==0，GF检查option+52==0；Battle模式GF分支改检查option+44==1。,程序判定,,game.dll 0x10029CB0 → 0x1002ADF0
+V6,regular,22,,無想,GF/DM,STEALTH选项=4通关难度≥50的曲目，且相关AUTO字段须满足原生限制；普通模式DM检查option+56==0，GF检查option+52==0；Battle模式GF分支改检查option+44==1。,程序判定,,game.dll 0x10029CB0 → 0x1002ADF0
+V6,regular,23,,心眼,GF/DM,STEALTH选项=4通关难度≥90的曲目，且相关AUTO字段须满足原生限制；普通模式DM检查option+56==0，GF检查option+52==0；Battle模式GF分支改检查option+44==1。,程序判定,,game.dll 0x10029CB0 → 0x1002ADF0
+V6,regular,24,,二級,GF/DM,SKILL POINT达到200；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,25,,一級,GF/DM,SKILL POINT达到400；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,26,,初段,GF/DM,SKILL POINT达到600；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,27,,二段,GF/DM,SKILL POINT达到800；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,28,,三段,GF/DM,SKILL POINT达到1000；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,29,,四段,GF/DM,SKILL POINT达到1100；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,30,,五段,GF/DM,SKILL POINT达到1200；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,31,,師範,GF/DM,SKILL POINT达到1300；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,32,,免許皆伝,GF/DM,SKILL POINT达到1400；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,33,,極,GF/DM,SKILL POINT达到1500；比较的是原生整数值除100后的结果。,程序判定,,game.dll 0x1002AE70
+V6,regular,34,,PAWN of BATTLE,GF/DM,BATTLE累计胜利数达到50。,程序判定,,game.dll 0x1002AF80
+V6,regular,35,,KNIGHT of BATTLE,GF/DM,BATTLE累计胜利数达到100。,程序判定,,game.dll 0x1002AF80
+V6,regular,36,,BISHOP of BATTLE,GF/DM,BATTLE累计胜利数达到200。,程序判定,,game.dll 0x1002AF80
+V6,regular,37,,ROOK of BATTLE,GF/DM,BATTLE累计胜利数达到300。,程序判定,,game.dll 0x1002AF80
+V6,regular,38,,QUEEN of BATTLE,GF/DM,BATTLE累计胜利数达到400。,程序判定,,game.dll 0x1002AF80
+V6,regular,39,,KING of BATTLE,GF/DM,BATTLE累计胜利数达到500。,程序判定,,game.dll 0x1002AF80
+V6,regular,40,,国士無双,GF/DM,BATTLE连胜计数达到5。,程序判定,,game.dll 0x1002AF80
+V6,regular,41,,天下無双,GF/DM,BATTLE的SS级10连胜达成锁存标志==1；生产端将打包对战资料+146的连胜字段与10比较，再保留历史达成位。,程序判定,,game.dll 0x10085960 → 0x100C8D10 → 0x1002AF80
+V6,regular,42,,撃墜者,GF/DM,网络BATTLE(game_mode=3)胜利，且对手战绩中的连续胜利字段≥4；原始阈值为4，是否代表显示上的5连胜待核对。,程序判定,,game.dll 0x1002AF80
+V6,regular,43,,撃墜王,GF/DM,网络BATTLE(game_mode=3)胜利，且对手战绩中的连续胜利字段≥9；原始阈值为9，是否代表显示上的10连胜待核对。,程序判定,,game.dll 0x1002AF80
+V6,regular,44,,二人はラブラブ(仮),GF/DM,网络BATTLE(game_mode=3)对手与本人的打包个人资料低14位完全相同：(opponent_word XOR self_word)&0x3FFF==0。,位条件确定；低14位字段释义待补证,,game.dll 0x1002AF80
+V6,regular,45,,殊勲賞,GF/DM,战斗资料中的击败强敌累计字段达到10（profile+0x1A5C）。,程序判定,,game.dll 0x1002AF80
+V6,regular,46,,BATTLE MASTER,GF/DM,BATTLE RATING原始整数达到140000，即显示1400.00。,程序判定,,game.dll 0x1002AF80
+V6,regular,47,,BATTLE KING,GF/DM,BATTLE RATING原始整数达到151000，即显示1510.00。,程序判定,,game.dll 0x1002AF80
+V6,regular,48,,777,GF/DM,RANDOM抽中曲目ID=811；读取随机选曲记录且该项random_selected==1，不额外要求通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,49,,Happy man,GF/DM,RANDOM抽中曲目ID=5；读取随机选曲记录且该项random_selected==1，不额外要求通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,50,,LUCKY? STAFF,GF/DM,RANDOM抽中曲目ID=208；读取随机选曲记录且该项random_selected==1，不额外要求通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,51,,七福神,GF/DM,RANDOM抽中曲目ID=1307；读取随机选曲记录且该项random_selected==1，不额外要求通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,52,,大凶,GF/DM,RANDOM抽中曲目，并在当局played记录中找到同曲、难度≥99的谱面；不额外要求clear标志。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,53,,ミラクル,GF/DM,RANDOM抽中曲目ID=1302；读取随机选曲记录且该项random_selected==1，不额外要求通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,54,,奇跡,GF/DM,RANDOM抽中曲目ID=1648；读取随机选曲记录且该项random_selected==1，不额外要求通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,55,,抽選王,GF/DM,当局随机抽选记录数量>0，且至少扫描到一条记录；此条本身不要求random_selected==1或通关。,程序判定,,game.dll 0x1002A9D0 → 0x1002B300
+V6,regular,56,,PEACE of IZUMI,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1602, 1200。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1602: BLUE EARTH / 1200: BE PROUD,game.dll 0x1002B7C0 / 0x10101460
+V6,regular,57,,激・親分　,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1638, 1507, 1408。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1638: ICICLES / 1507: TENGU / 1408: ZIGZAG LIFE,game.dll 0x1002B7C0 / 0x10101474
+V6,regular,58,,YAMATO組☆親衛隊,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1614, 1615, 1626。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1614: JONETSU FUN FUN / 1615: HUMMING RABBIT / 1626: KONAMONYA NINJY,game.dll 0x1002B7C0 / 0x10101488
+V6,regular,59,,Nakamura2000GT,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1608, 1410, 1309。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1608: RED / 1410: SLANG / 1309: RING,game.dll 0x1002B7C0 / 0x1010149c
+V6,regular,60,,ションボリ強化委員会,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：955, 1116, 1115。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,955: JUN BEN KA / 1116: LONELY GIRL / 1115: AISYUU NO KORIG,game.dll 0x1002B7C0 / 0x101014b0
+V6,regular,61,,あさきすと,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1606, 1605, 1604。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1606: SIREN / 1605: NIL / 1604: UNDER THE NEST,game.dll 0x1002B7C0 / 0x101014c4
+V6,regular,62,,本家TOMOSUKE屋,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1618, 1216, 1010。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1618: WALK WITH YOU / 1216: TIZONA D ELCID / 1010: MEIKYOSISUI,game.dll 0x1002B7C0 / 0x101014d8
+V6,regular,63,,1000ちゃんファミリー,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1548, 1520, 1314。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1548: DYNAMIS / 1520: ROCK TO INFINIT / 1314: AXIS,game.dll 0x1002B7C0 / 0x101014ec
+V6,regular,64,,真・96ちゃん改革,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1621, 1622, 1624。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1621: DEVOLUTION OF T / 1622: THE ASCENSION / 1624: LILY OF THE VAL,game.dll 0x1002B7C0 / 0x10101500
+V6,regular,65,,Des・ラー小隊,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1617, 1513, 1319。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1617: JUICY / 1513: FUSIGIDANIPPON / 1319: SAMURAI,game.dll 0x1002B7C0 / 0x10101514
+V6,regular,66,,ベストピアニスト,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：920, 619, 403。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,920: TIMEPIECE PHASE / 619: CONCERTINO IN B / 403: THE LEAST 100SE,game.dll 0x1002B7C0 / 0x10101528
+V6,regular,67,,SOUL of HONE,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1609, 1508, 1124。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1609: HIGHWAY STAR / 1508: MUDAI / 1124: HEAVENS COCKTAI,game.dll 0x1002B7C0 / 0x1010153c
+V6,regular,68,,浄化完了,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1616, 1512, 1129。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1616: CATHARSIS GARDE / 1512: KYOUKA SUIGETSU / 1129: ESCAPE TO THE S,game.dll 0x1002B7C0 / 0x10101550
+V6,regular,69,,デラックス王子,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1611, 1612, 1463。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1611: GARASU NO KOBUN / 1612: FUJINUNRYUDEN / 1463: TEARS OF HAPPIN,game.dll 0x1002B7C0 / 0x10101564
+V6,regular,70,,琉球歌姫,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1606, 1511, 1211。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1606: SIREN / 1511: MANATSUNOKOIWAC / 1211: MORATORIAMU,game.dll 0x1002B7C0 / 0x10101578
+V6,regular,71,,FUSION PLANET,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1460, 958, 512。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1460: TABIDACHI / 958: A SHOOTING STAR / 512: FEEL THE EARTH,game.dll 0x1002B7C0 / 0x1010158c
+V6,regular,72,,瞳の中の未来,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：903, 801, 1001。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,903: SUISHO / 801: NAMIDA NO REGRE / 1001: MY FRIEND,game.dll 0x1002B7C0 / 0x101015a0
+V6,regular,73,,GENTLE VOICE,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1411, 1333, 1312。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1411: CHARISMATIC / 1333: CIRCLES / 1312: NO HESITATION,game.dll 0x1002B7C0 / 0x101015b4
+V6,regular,74,,恋せよ乙女,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1428, 1526, 1629。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1428: KOIHAOKUBYOU / 1526: GOING MY WAY / 1629: IJIWARUNAANATA,game.dll 0x1002B7C0 / 0x101015c8
+V6,regular,75,,TAGSSA -転生編-,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1619, 1620, 1517。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1619: 1/N / 1620: CHRONOS / 1517: VANESSA,game.dll 0x1002B7C0 / 0x101015dc
+V6,regular,76,,NO.1,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：7, 1418, 1619。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,7: SKA SKA NO1 / 1418: R#1 / 1619: 1/N,game.dll 0x1002B7C0 / 0x101015f0
+V6,regular,77,,NO.2,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：318, 1300, 1015。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,318: CLASSIC PARTY 2 / 1300: MODEL FT2 / 1015: FUTARI HA RABUR,game.dll 0x1002B7C0 / 0x10101604
+V6,regular,78,,NO.3,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：703, 717, 1105。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,703: MODEL DD3 / 717: MIKENEKO ROKKU / 1105: SANDOGASA PONTA,game.dll 0x1002B7C0 / 0x10101618
+V6,regular,79,,NUMBERS,GF/DM,"已取得称号ID 76, 77, 78；这些称号可分局取得。",程序判定,,game.dll 0x1002B700
+V6,regular,80,,風神,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1612, 1120, 1310。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1612: FUJINUNRYUDEN / 1120: WHITE ｔORNADO / 1310: PURPLE STORM,game.dll 0x1002B7C0 / 0x1010162c
+V6,regular,81,,雷神,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1445, 1231, 909。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1445: ENRAI / 1231: BLOOD AND THUND / 909: ELECTRIC SUN,game.dll 0x1002B7C0 / 0x10101640
+V6,regular,82,,火神,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：207, 406, 1649。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,207: FIRE / 406: FIRE IN THE DAR / 1649: THROUGH THE FIR,game.dll 0x1002B7C0 / 0x10101654
+V6,regular,83,,水神,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1010, 1512, 1632。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1010: MEIKYOSISUI / 1512: KYOUKA SUIGETSU / 1632: WATER FRAME,game.dll 0x1002B7C0 / 0x10101668
+V6,regular,84,,八百万神,GF/DM,"已取得称号ID 80, 81, 82, 83；这些称号可分局取得。",程序判定,,game.dll 0x1002B700
+V6,regular,85,,百鬼夜行,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1010, 1422, 1319。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1010: MEIKYOSISUI / 1422: ICHIMOUDAJIN / 1319: SAMURAI,game.dll 0x1002B7C0 / 0x1010167c
+V6,regular,86,,御主人様,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：103, 613, 110。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,103: BREAK OUT / 613: ROCKIN' PARADIS / 110: COSMIC COWGIRL,game.dll 0x1002B7C0 / 0x10101690
+V6,regular,87,,PLANTS COLLECTOR,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1624, 1625, 1616。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1624: LILY OF THE VAL / 1625: FOUR LEAF / 1616: CATHARSIS GARDE,game.dll 0x1002B7C0 / 0x101016a4
+V6,regular,88,,FRUITS COLLECTOR,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：837, 830, 1206。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,837: RINGO TO HACHIM / 830: CHERII / 1206: GREEN LIME,game.dll 0x1002B7C0 / 0x101016b8
+V6,regular,89,,FLOWER COLLECTOR,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：804, 1136, 1530。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,804: HANANO UTA / 1136: KOKOU NO HANA / 1530: RINTOSITESAKUHA,game.dll 0x1002B7C0 / 0x101016cc
+V6,regular,90,,植物学者,GF/DM,"已取得称号ID 87, 88, 89；这些称号可分局取得。",程序判定,,game.dll 0x1002B700
+V6,regular,91,,少年,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：901, 1117, 1642。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,901: HONOLULU LOCO B / 1117: MUSHROOM BOY / 1642: 20TH CENTURY BO,game.dll 0x1002B7C0 / 0x101016e0
+V6,regular,92,,少女,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：735, 500, 600。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,735: HOME GIRL / 500: SUNFLOWER GIRL / 600: JET COASTER GIR,game.dll 0x1002B7C0 / 0x101016f4
+V6,regular,93,,サラリーマン,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：17, 731, 1446。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,17: ULTIMATE POWER / 731: HITONI YASASIKU / 1446: TARIHO,game.dll 0x1002B7C0 / 0x10101708
+V6,regular,94,,ＯＬ,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1347, 1346, 1007。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1347: GO MY WAY / 1346: LOOKIN' FOR LOV / 1007: PASSION,game.dll 0x1002B7C0 / 0x1010171c
+V6,regular,95,,ヒューマンライフ,GF/DM,"已取得称号ID 91, 92, 93, 94；这些称号可分局取得。",程序判定,,game.dll 0x1002B700
+V6,regular,96,,俺のターン,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：906, 1513, 1608。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,906: JOKER / 1513: FUSIGIDANIPPON / 1608: RED,game.dll 0x1002B7C0 / 0x10101730
+V6,regular,97,,光,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1646, 803, 1416。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1646: LIGHT / 803: GEKKOUCHOU / 1416: PRIME LIGHT,game.dll 0x1002B7C0 / 0x10101744
+V6,regular,98,,闇,GF/DM,"同一局内通关下列全部曲目（顺序、难度、部件不限）：1545, 406, 1443。程序扫描当局8个记录槽，需played和clear均非零。",程序判定,1545: AFTER DARK / 406: FIRE IN THE DAR / 1443: BLACK NIGHT,game.dll 0x1002B7C0 / 0x10101758
+V6,regular,99,,DIE HARD,GF/DM,普通模式所有有效已玩阶段均通关且RISKY字段option+48非零；入门模式、任何有效阶段未通关或RISKY=0均阻止取得。,程序判定,,game.dll 0x10029CB0 → 0x1002ADF0
+V6,regular,100,,Concentrative,GF/DM,同局有效played记录中连续3首的曲目ID相同；扫描时不要求clear。无效槽会被跳过。,程序判定,,game.dll 0x10029CB0 → 0x1002ADF0
+V6,regular,101,,繋ぎ屋,GF/DM,累计FULL COMBO不同曲目数达到300。,程序判定,,game.dll 0x1002A300 → 0x1002B3D0
+V6,regular,102,,神の手,GF/DM,累计EXCELLENT不同曲目数：GF≥300，DM≥200。,程序判定,,game.dll 0x1002A300 → 0x1002B3D0
+V6,regular,103,,Master of Meisters,GF/DM,"匠资料有效且四个部件/项目的meister等级均为6（四个字段：player+2992,+2996,+3000,+3004）。",四字段条件确定；等级显示名称待补证,,game.dll 0x10029490
+V6,commemorative,1000,0,あけおめ,GF/DM,服务端活动位字段包含0x40；客户端不直接比较本机日期，实际活动日期取决服务端。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1001,1,ことよろ,GF/DM,BATTLE对手打包数据的0x80000纪念称号有效位设置，且对手称号编号为0或1（あけおめ/ことよろ）。,程序判定,,game.dll 0x1002AF80
+V6,commemorative,1002,2,バレンタイン,GF/DM,服务端活动位包含0x80，当局played记录中出现曲目ID=709；不要求clear。,程序判定,,game.dll 0x1002B9D0
+V6,commemorative,1003,3,七夕,GF/DM,服务端活动位包含0x2，当局played记录中出现曲目ID=823；不要求clear。,程序判定,,game.dll 0x1002B9D0
+V6,commemorative,1004,4,暑中お見舞い,GF/DM,服务端活动位字段包含0x4；客户端不直接比较本机日期，实际活动日期取决服务端。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1005,5,HAPPY HALLOWEEN,GF/DM,服务端活动位字段包含0x8；客户端不直接比较本机日期，实际活动日期取决服务端。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1006,6,おつかれさま,GF/DM,服务端活动位包含0x10，当局played记录中出现曲目ID=1108；不要求clear。,程序判定,,game.dll 0x1002B9D0
+V6,commemorative,1007,7,Merry Xmas,GF/DM,服务端活动位字段包含0x20；客户端不直接比较本机日期，实际活动日期取决服务端。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1008,8,Welcome !,GF/DM,服务端活动位字段包含0x1；客户端不直接比较本机日期，实际活动日期取决服务端。 另有BATTLE对手记录首字节==1的独立授予路径，尚未闭合该字节语义。,程序判定,,game.dll 0x10029490 → 0x1002B9D0 / 0x1002AF80
+V6,commemorative,1009,9,SPECIAL THANKS,GF/DM,BATTLE对手打包数据的工作人员位0x200000设置。,程序判定,,game.dll 0x1002AF80
+V6,commemorative,1010,10,GITADORA HISTORY,GF/DM,10周年SERIES EDITION共11个进度值均≥100；可由历史资料进度或当局相应活动进度达成。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1011,11,MASTER OF MUSIC,GF/DM,10周年GENRE EDITION共11个进度值均≥100；可由历史资料进度或当局相应活动进度达成。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1012,12,V5 SKILL MASTERS,GF/DM,服务端上代实绩奖励字节包含bit 0x1；客户端没有本地重算V5排名门槛。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1013,13,V5 B-RATING MASTERS,GF/DM,服务端上代实绩奖励字节包含bit 0x2；客户端没有本地重算V5排名门槛。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1014,14,V5 GRAND CHAMPION,GF/DM,服务端上代实绩奖励字节包含bit 0x4；客户端没有本地重算V5排名门槛。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1015,15,V5 GP MASTERS,GF/DM,服务端上代实绩奖励字节包含bit 0x8；客户端没有本地重算V5排名门槛。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1016,16,V5 GOOD PLAYERS,GF/DM,服务端上代实绩奖励字节包含bit 0x10；客户端没有本地重算V5排名门槛。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1017,17,トップランカー2008ファイナリスト,GF/DM,历史大会专属奖励；本轮普通授予子函数没有发现新授予该编号的分支，已获列表可从服务器加载。,历史称号保留；本轮未闭合新授予来源,,game.dll 0x10029490 / 0x1002B9D0
+V6,commemorative,1018,18,トップランカー2008優勝者,GF/DM,历史大会专属奖励；本轮普通授予子函数没有发现新授予该编号的分支，已获列表可从服务器加载。,历史称号保留；本轮未闭合新授予来源,,game.dll 0x10029490 / 0x1002B9D0
+V6,commemorative,1019,19,継承者,GF/DM,已存在V5继承资料标记（原生历史等级字段≥0时构造bit2）。,程序判定,,game.dll 0x10029490 → 0x1002B9D0
+V6,commemorative,1020,20,TITLE COMPLETED,GF/DM,收齐适用当前机种的所有普通称号：GF为103个，DM为101个；不要求收齐全部纪念称号。,程序判定,,game.dll 0x100297A0 → 0x10032E50
+V6,commemorative,1021,21,GF1～3 CONQUEROR,GF,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。GF专属前5类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1022,22,GF4～5 CONQUEROR,GF,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。GF专属前5类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1023,23,GF6～7 CONQUEROR,GF,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。GF专属前5类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1024,24,GF8～9 CONQUEROR,GF,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。GF专属前5类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1025,25,GF10～11 CONQUEROR,GF,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。GF专属前5类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1026,26,dm1～2 CONQUEROR,DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1027,27,dm3～4 CONQUEROR,DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1028,28,dm5～6 CONQUEROR,DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1029,29,dm7～8 CONQUEROR,DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1030,30,dm9～10 CONQUEROR,DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1031,31,V CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1032,32,V2 CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1033,33,V3 CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1034,34,V4 CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1035,35,V5 CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1036,36,V6 CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1037,37,ULTIMATE CONQUEROR,GF/DM,QUEST对应类别的全部有效任务位均完成；程序遍历该类别31个任务表项，仅对任务ID≥0的项要求位为1。DM前5类或V/V2/V3/V4/V5/V6/ULTIMATE共通类。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1038,38,Beginner,GF/DM,QUEST进度两个原始DWORD字段至少一个非零；官方提示为QUEST RANK Beginner。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1039,39,Mania,GF/DM,QUEST历史rank位集合包含bit 0（0x1）；提示对应Mania。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1040,40,Street musician,GF/DM,QUEST历史rank位集合包含bit 1（0x2）；提示对应Street musician。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1041,41,New hope,GF/DM,QUEST历史rank位集合包含bit 2（0x4）；提示对应New hope。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1042,42,Opening act,GF/DM,QUEST历史rank位集合包含bit 3（0x8）；提示对应Opening act。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1043,43,Major,GF/DM,QUEST历史rank位集合包含bit 4（0x10）；提示对应Major。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1044,44,Charisma musician,GF/DM,QUEST历史rank位集合包含bit 5（0x20）；提示对应Charisma musician。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1045,45,Head liner,GF/DM,QUEST历史rank位集合包含bit 6（0x40）；提示对应Head liner。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1046,46,Artist of the year,GF/DM,QUEST历史rank位集合包含bit 7（0x80）；提示对应Artist of the year。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1047,47,King of rock,GF/DM,QUEST历史rank位集合包含bit 8（0x100）；提示对应King of rock。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1048,48,Hall of fame,GF/DM,QUEST历史rank位集合包含bit 9（0x200）；提示对应Hall of fame。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1049,49,Legend,GF/DM,QUEST历史rank位集合包含bit 10（0x400）；提示对应Legend。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1050,50,God,GF/DM,QUEST历史rank位集合包含bit 11（0x800）；提示对应God。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1051,51,ストリートデビュー,GF/DM,当局服务端活动标志包含0x1，且QUEST地图等级≥1。,程序判定,,game.dll 0x10029490 → 0x1002B480
+V6,commemorative,1052,52,ギタドライブ出演者,GF/DM,当局服务端活动标志包含0x2，且QUEST地图等级≥4。,程序判定,,game.dll 0x10029490 → 0x1002B480
+V6,commemorative,1053,53,BLAZING FES出演者,GF/DM,当局服务端活动标志包含0x4，且QUEST地图等级≥6。,程序判定,,game.dll 0x10029490 → 0x1002B480
+V6,commemorative,1054,54,日本制覇,GF/DM,QUEST地图等级≥9。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1055,55,アジア制覇,GF/DM,QUEST地图等级≥10。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1056,56,世界制覇,GF/DM,QUEST地图等级≥11。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1057,57,宇宙掌握,GF/DM,QUEST地图等级≥12。,程序判定,,game.dll 0x1002B480
+V6,commemorative,1058,58,AGE 15以下 CHAMPION,GF/DM,对应大会预选记录kind=1、subkind=1，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1059,59,AGE 16～20 CHAMPION,GF/DM,对应大会预选记录kind=1、subkind=2，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1060,60,AGE 21～29 CHAMPION,GF/DM,对应大会预选记录kind=1、subkind=3，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1061,61,AGE 30以上 CHAMPION,GF/DM,对应大会预选记录kind=1、subkind=4，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1062,62,SEQUENCE オルタ CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=1，rank==1。该SEQUENCE子类别限GF。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1063,63,SEQUENCE  運指 CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=2，rank==1。该SEQUENCE子类别限GF。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1064,64,SEQUENCE WAILING CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=3，rank==1。该SEQUENCE子类别限GF。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1065,65,SEQUENCE 2連3連 CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=4，rank==1。该SEQUENCE子类别限GF。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1066,66,SEQUENCE 連打 CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=1，rank==1。该SEQUENCE子类别限DM。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1067,67,SEQUENCE 鬼叩 CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=2，rank==1。该SEQUENCE子类别限DM。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1068,68,SEQUENCE タム回し CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=3，rank==1。该SEQUENCE子类别限DM。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1069,69,SEQUENCE BASS CHAMPION,GF/DM,对应大会预选记录kind=2、subkind=4，rank==1。该SEQUENCE子类别限DM。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1070,70, BLOOD A型 CHAMPION,GF/DM,对应大会预选记录kind=3、subkind=1，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1071,71, BLOOD B型 CHAMPION,GF/DM,对应大会预选记录kind=3、subkind=2，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1072,72, BLOOD O型 CHAMPION,GF/DM,对应大会预选记录kind=3、subkind=3，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1073,73, BLOOD AB型 CHAMPION,GF/DM,对应大会预选记录kind=3、subkind=4，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1074,74,V6est COURSE1 CHAMPION,GF/DM,对应大会预选记录kind=4、subkind=1，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1075,75,V6est COURSE2 CHAMPION,GF/DM,对应大会预选记录kind=4、subkind=2，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1076,76,V6est COURSE3 CHAMPION,GF/DM,对应大会预选记录kind=4、subkind=3，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1077,77,V6est COURSE4 CHAMPION,GF/DM,对应大会预选记录kind=4、subkind=4，rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1078,78,KING of AGE,GF/DM,对应大会决赛记录kind=1、subkind=5且rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1079,79,KING of SEQUENCE,GF/DM,对应大会决赛记录kind=2、subkind=5且rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1080,80,KING of BLOOD,GF/DM,对应大会决赛记录kind=3、subkind=5且rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1081,81,KING of V6est,GF/DM,对应大会决赛记录kind=4、subkind=5且rank==1。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1082,82,RANKER of AGE,GF/DM,对应大会决赛记录kind=1、subkind=5，rank非1且结果标记==3。官方提示为决赛上位者；精确名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1083,83,RANKER of SEQUENCE,GF/DM,对应大会决赛记录kind=2、subkind=5，rank非1且结果标记==3。官方提示为决赛上位者；精确名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1084,84,RANKER of BLOOD,GF/DM,对应大会决赛记录kind=3、subkind=5，rank非1且结果标记==3。官方提示为决赛上位者；精确名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1085,85,RANKER of V6est,GF/DM,对应大会决赛记录kind=4、subkind=5，rank非1且结果标记==3。官方提示为决赛上位者；精确名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1086,86,FINALIST of AGE,GF/DM,对应大会预选记录kind=1、subkind=1..4且结果标记==2。官方提示为决赛进出者；精确预选名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1087,87,FINALIST of SEQUENCE,GF/DM,对应大会预选记录kind=2、subkind=1..4且结果标记==2。官方提示为决赛进出者；精确预选名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1088,88,FINALIST of BLOOD,GF/DM,对应大会预选记录kind=3、subkind=1..4且结果标记==2。官方提示为决赛进出者；精确预选名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1089,89,FINALIST of V6est,GF/DM,对应大会预选记录kind=4、subkind=1..4且结果标记==2。官方提示为决赛进出者；精确预选名次数界由此标记生产者决定。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1090,90,BLAZING SPECIAL PRIZE,GF/DM,AGE、SEQUENCE、BLOOD、V6est四类大会均存在参加记录（预选rank>0），当前报名类也可由服务端当前大会字段计入。,程序判定,,game.dll 0x1002BDC0
+V6,commemorative,1091,91,QUEST CONQUEROR,GF/DM,全部12组QUEST的全部有效任务位均完成；每组扫描31项，任务ID<0视为空项。,程序判定,,game.dll 0x1002B480
+V7,regular,0,,新人,GF/DM,使用有效卡游玩并进入称号结算；有效玩家没有额外门槛。,程序判定,,game.dll 0x10025570 → 0x100269E0；表行 0x100cc740
+V7,regular,1,,わかば,GF/DM,当局游玩BEGINNER入门模式（模式值0）。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x100269E0；表行 0x100cc7ac
+V7,regular,2,,仙人,GF/DM,累计游玩次数达到1000。,程序判定,,game.dll 0x10025570 → 0x100269E0；表行 0x100cc818
+V7,regular,3,,SessionFreaks,GF/DM,累计Session游玩次数达到30。,程序判定,,game.dll 0x10025570 → 0x100269E0；表行 0x100cc884
+V7,regular,4,,切磋琢磨,GF/DM,已注册至少一名RIVAL；RIVAL数据存在非空项。,程序判定,,game.dll 0x10025570 → 0x100269E0；表行 0x100cc8f0
+V7,regular,5,,好敵手,GF/DM,被其他玩家注册为RIVAL；对应服务端统计非0。,程序判定,,game.dll 0x10025570 → 0x100269E0；表行 0x100cc95c
+V7,regular,6,,Guitarist,GF,Guitar乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100cc9c8
+V7,regular,7,,Bassist,GF,Bass乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100cca34
+V7,regular,8,,Openpicker,GF,Open乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100ccaa0
+V7,regular,9,,Drummer,DM,Drum乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100ccb0c
+V7,regular,10,,EXC ACHIEVER,GF/DM,本轮至少一次EXCELLENT。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100ccb78
+V7,regular,11,,EXC EXPERT,GF/DM,本轮至少一次EXCELLENT，谱面难度达到40。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100ccbe4
+V7,regular,12,,EXC MASTER,GF/DM,本轮至少一次EXCELLENT，谱面难度达到80。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100ccc50
+V7,regular,13,,FC ACHIEVER,GF/DM,本轮至少一次FULL COMBO；EXCELLENT也计入。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100cccbc
+V7,regular,14,,FC EXPERT,GF/DM,本轮至少一次FULL COMBO，谱面难度达到50；EXCELLENT也计入。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100ccd28
+V7,regular,15,,FC MASTER,GF/DM,本轮至少一次FULL COMBO，谱面难度达到90；EXCELLENT也计入。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100ccd94
+V7,regular,16,,Headliner,GF/DM,本轮通关本版PREMIUM ENCORE曲（musicid 1712）。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026B20；表行 0x100cce00
+V7,regular,17,,小覇王,GF/DM,累计通关通常新曲中的全部有效歌曲；每首任一有效乐器/难度有CLEAR即可，新曲依mdbe新曲位及过滤器确定。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100cce6c
+V7,regular,18,,覇王,GF/DM,累计通关通常曲库的全部有效歌曲；每首任一有效乐器/难度有CLEAR即可。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100cced8
+V7,regular,19,,皇帝,GF/DM,累计通关通常新曲的全部有效谱面；各存在谱面均需CLEAR，无效或难度0谱面跳过。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100ccf44
+V7,regular,20,,天帝,GF/DM,累计通关通常曲库的全部有效谱面；各存在谱面均需CLEAR，无效或难度0谱面跳过。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x10026B20；表行 0x100ccfb0
+V7,regular,21,,覚醒,GF/DM,本轮使用STEALTH通关至少一次；须通过对应GF/DM的AUTO排除检查。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026D70；表行 0x100cd01c
+V7,regular,22,,無想,GF/DM,本轮使用STEALTH通关难度至少50的谱面；须通过对应GF/DM的AUTO排除检查。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026D70；表行 0x100cd088
+V7,regular,23,,心眼,GF/DM,本轮使用STEALTH通关难度至少90的谱面；须通过对应GF/DM的AUTO排除检查。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x10026D70；表行 0x100cd0f4
+V7,regular,24,,二級,GF/DM,SKILL达到200；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd160
+V7,regular,25,,一級,GF/DM,SKILL达到400；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd1cc
+V7,regular,26,,初段,GF/DM,SKILL达到600；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd238
+V7,regular,27,,二段,GF/DM,SKILL达到800；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd2a4
+V7,regular,28,,三段,GF/DM,SKILL达到1000；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd310
+V7,regular,29,,四段,GF/DM,SKILL达到1100；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd37c
+V7,regular,30,,五段,GF/DM,SKILL达到1200；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd3e8
+V7,regular,31,,師範,GF/DM,SKILL达到1300；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd454
+V7,regular,32,,免許皆伝,GF/DM,SKILL达到1400；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd4c0
+V7,regular,33,,極,GF/DM,SKILL达到1500；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x10025570 → 0x10026E30；表行 0x100cd52c
+V7,regular,34,,Corporal of BATTLE,GF/DM,累计BATTLE胜场达到50。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd598
+V7,regular,35,,Sergeant of BATTLE,GF/DM,累计BATTLE胜场达到100。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd604
+V7,regular,36,,Captain of BATTLE,GF/DM,累计BATTLE胜场达到200。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd670
+V7,regular,37,,Major of BATTLE,GF/DM,累计BATTLE胜场达到300。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd6dc
+V7,regular,38,,Colonel of BATTLE,GF/DM,累计BATTLE胜场达到400。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd748
+V7,regular,39,,General of BATTLE,GF/DM,累计BATTLE胜场达到500。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd7b4
+V7,regular,40,,国士無双,GF/DM,当前BATTLE连胜达到5。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd820
+V7,regular,41,,天下無双,GF/DM,SS段位连胜10场锁存标记为1；已追到>=10的锁存，计数更上游生产仍待补证。,阈值已核准，上游计数未完全闭合,,game.dll 0x10025570 → 0x10026FB0；V7 0x1007BE20（v7-0x1007c0c5.c）；表行 0x100cd88c
+V7,regular,42,,撃墜者,GF/DM,在线BATTLE本轮获胜，且对手进入本场前的连胜数达到4。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd8f8
+V7,regular,43,,撃墜王,GF/DM,在线BATTLE本轮获胜，且对手进入本场前的连胜数达到9。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd964
+V7,regular,44,,偶然という名の必然,GF/DM,在线BATTLE对手与自身打包属性的低14bit完全相同；这些位对应哪些UI属性尚未闭合，不展开猜测。,位比较已核准，属性含义未闭合,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cd9d0
+V7,regular,45,,殊勲賞,GF/DM,BATTLE模式结算时，服务端高手击败统计达到10；“高手”的精确定义尚未追完。,字段阈值已核准，统计定义未闭合,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cda3c
+V7,regular,46,,BATTLE MASTER,GF/DM,BATTLE模式结算时，BATTLE RATING内部值达到140000。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cdaa8
+V7,regular,47,,BATTLE KING,GF/DM,BATTLE模式结算时，BATTLE RATING内部值达到151000。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cdb14
+V7,regular,48,,777,GF/DM,本轮RANDOM抽中777（musicid 811）；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cdb80
+V7,regular,49,,Happy man,GF/DM,本轮RANDOM抽中Happy man（musicid 5）；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cdbec
+V7,regular,50,,LUCKY? STAFF,GF/DM,本轮RANDOM抽中LUCKY?STAFF（musicid 208）；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cdc58
+V7,regular,51,,七福神,GF/DM,本轮RANDOM抽中七福神（musicid 1307）；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cdcc4
+V7,regular,52,,大凶,GF/DM,本轮RANDOM抽曲记录命中，且本轮选用该曲的有效谱面难度达到99；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cdd30
+V7,regular,53,,ミラクル,GF/DM,本轮RANDOM抽中MODEL FT2 Miracle Version（musicid 1302）；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cdd9c
+V7,regular,54,,奇跡,GF/DM,本轮RANDOM抽中キセキ（musicid 1648）；不要求通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cde08
+V7,regular,55,,抽選王,GF/DM,本轮存在RANDOM抽曲记录；不要求抽中特定歌曲或通关。,程序判定,,game.dll 0x10025570 → 0x10026870 → 0x100272B0；表行 0x100cde74
+V7,regular,56,,HYPER IZUMI LAND,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 21、411、1700。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,21: JET WORLD / 411: MAGICAL JET TOU / 1700: HYPER JET LAND,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100cdee0
+V7,regular,57,,昭和ノスタルジー,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1325、1413、1714。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1325: MODORANAI KOI / 1413: SAYONARADAYORI / 1714: EGOCENTRICITY,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100cdf4c
+V7,regular,58,,Kozoの森,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 612、956、1720。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,612: WILD RIDE / 956: AITHON / 1720: DEEP FOREST,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100cdfb8
+V7,regular,59,,あさきち,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1703、1605、1715。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1703: PIRANHA / 1605: NIL / 1715: HOSHIFURI,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce024
+V7,regular,60,,The 96 Empire,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1621、1701、1711。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1621: DEVOLUTION OF T / 1701: KAISER PHOENIX / 1711: CALAMITY PHOENI,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce090
+V7,regular,61,,小野隊長親衛隊,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 717、1508、1722。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,717: MIKENEKO ROKKU / 1508: MUDAI / 1722: MIKENEKO JIVE,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce0fc
+V7,regular,62,,Trick Trap,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 810、1120、1310。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,810: BLACK HORIZON / 1120: WHITE TORNADO / 1310: PURPLE STORM,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce168
+V7,regular,63,,夢色王子,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1310、1612、1702。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1310: PURPLE STORM / 1612: FUJINUNRYUDEN / 1702: BLUE PLANET,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce1d4
+V7,regular,64,,恋する乙女,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1526、1629、1731。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1526: GOING MY WAY / 1629: IJIWARUNAANATA / 1731: HUNTER,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce240
+V7,regular,65,,Legend of Fusion,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 816、958、1729。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,816: YOU CANT DO IT / 958: A SHOOTING STAR / 1729: SKY RUNNER,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce2ac
+V7,regular,66,,PERFECT VOICE,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1411、1333、1714。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1411: CHARISMATIC / 1333: CIRCLES / 1714: EGOCENTRICITY,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce318
+V7,regular,67,,真・大親分,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 805、1408、1638。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,805: MANGEKYO / 1408: ZIGZAG LIFE / 1638: ICICLES,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce384
+V7,regular,68,,TAGのタグ,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1416、1620、1710。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1416: PRIME LIGHT / 1620: CHRONOS / 1710: BEFORE DAYBREAK,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce3f0
+V7,regular,69,,PLANET EARTH,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 512、1602、1702。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,512: FEEL THE EARTH / 1602: BLUE EARTH / 1702: BLUE PLANET,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce45c
+V7,regular,70,,JUNGLE王者,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1203、1502、1600。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1203: MAGIC WORDS / 1502: BLUE FOREST / 1600: JUNGLE,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce4c8
+V7,regular,71,,Sunshine,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1751、1421、1740。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1751: MY SUNSHINE / 1421: RAINING SUNSHIN / 1740: TAIYO NO HANA,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce534
+V7,regular,72,,ROCKER,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 613、1303、1520。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,613: ROCKIN' PARADIS / 1303: ROCK STAR / 1520: ROCK TO INFINIT,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce5a0
+V7,regular,73,,METAL QUEEN,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1436、1437、1649。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1436: NEMESIS / 1437: LEAVING ALL BEH / 1649: THROUGH THE FIR,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce60c
+V7,regular,74,,PROG-ROCK,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1524、1701、1712。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1524: FORCE INTERVAL / 1701: KAISER PHOENIX / 1712: MODEL DD9,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce678
+V7,regular,75,,JAZZ MAN,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 610、1124、1215。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,610: ONE PHRASE BLUE / 1124: HEAVENS COCKTAI / 1215: TAKE MY HAND,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce6e4
+V7,regular,76,,LOVE POPS,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1755、1756、1757。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1755: TRICKSTER / 1756: SORAIRODAYS / 1757: KIMAGUREROMANTI,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce750
+V7,regular,77,,DIGI ROCKER,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 12、537、1724。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,12: HYPNOTICA / 537: HYPNOTHEQUE / 1724: YOU'VE GOT 2 GE,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce7bc
+V7,regular,78,,バードウォッチャー,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 910、1639、1701。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,910: KAGONOTORI / 1639: BLUE BIRD / 1701: KAISER PHOENIX,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce828
+V7,regular,79,,海人,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 408、716、1703。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,408: ORANGE JET STRE / 716: THE OCEAN AND Y / 1703: PIRANHA,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce894
+V7,regular,80,,洟・月・奇蹟,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 804、803、1648。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,804: HANANO UTA / 803: GEKKOUCHOU / 1648: KISEKI,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce900
+V7,regular,81,,体育会系,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1244、1439、1641。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1244: AI NO TAMENI / 1439: CHAMPIONE / 1641: FANTASISTA,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce96c
+V7,regular,82,,文化会系,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1519、1204、1526。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1519: COLORFUL PASTEL / 1204: SAISOKUTOUHIKOU / 1526: GOING MY WAY,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ce9d8
+V7,regular,83,,堕天使,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1205、1633。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1205: RAKUENNOTENSHI / 1633: BROKEN HEARTS A,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100cea44
+V7,regular,84,,TOURIST,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 700、800、1401、901。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,700: MEI LI DE JIA X / 800: TIERRA BUENA / 1401: GORI GORI / 901: HONOLULU LOCO B,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ceab0
+V7,regular,85,,HIKER,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1750、606、1618。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1750: AYUMI / 606: MOONLIGHT WALKI / 1618: WALK WITH YOU,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ceb1c
+V7,regular,86,,SWIMMER,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 609、1409。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,609: SUIMAAZU / 1409: SWIMMING IN LOV,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ceb88
+V7,regular,87,,モンスターキラー,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1105、1545、1627。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1105: SANDOGASA PONTA / 1545: AFTER DARK / 1627: VAMPIREKILLER,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100cebf4
+V7,regular,88,,アイドル FUN！FUN！,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1614、750。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1614: JONETSU FUN FUN / 750: SUTAANO KOIBITO,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100cec60
+V7,regular,89,,Dragon Blade,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1008、1224。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1008: DRAGON BLADE / 1224: THE LEGEND,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ceccc
+V7,regular,90,,CLEAN ENERGY,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 953、1236、1429。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,953: MUNAGOTO NO UMI / 1236: MINAMIKAZE / 1429: TAIYO,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ced38
+V7,regular,91,,フルーツ盛り,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 837、1206、1758。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,837: RINGO TO HACHIM / 1206: GREEN LIME / 1758: STRAWBERRY,game.dll 0x10025570 → 0x100274D0；v7-song-groups.json；表行 0x100ceda4
+V7,regular,92,,DIE HARD,GF/DM,本轮所有有效stage均启用RISKY（内部值非0），且没有失败触发；排除BEGINNER路径。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x100269E0；表行 0x100cee10
+V7,regular,93,,Concentrative,GF/DM,本轮连续3个有效stage使用同一musicid；该判定不要求这3次全部CLEAR。,程序判定,,game.dll 0x10025570 → 0x10025C70 → 0x100269E0；表行 0x100cee7c
+V7,regular,94,,繋ぎ屋,GF/DM,历史FULL COMBO歌曲数达到300；每首任一谱面FC即计1首，EXCELLENT也计入。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x100273D0；表行 0x100ceee8
+V7,regular,95,,神の手,GF/DM,历史EXCELLENT歌曲数GF达到300、DM达到200；每首任一谱面EXCELLENT即计1首。,程序判定,,game.dll 0x10025570 → 0x100262B0 → 0x100273D0；表行 0x100cef54
+V7,regular,96,,Master of Meisters,GF/DM,Meister有效标记非0，且4个Meister类别的等级全部为6。,程序判定,,game.dll 0x10025570 → 0x10027450；表行 0x100cefc0
+V7,commemorative,1000,,あけおめ,GF/DM,服务端player/kikan_event活动位0x40开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf02c
+V7,commemorative,1001,,ことよろ,GF/DM,BATTLE遇到对手：对手打包数据含0x80000有效位，且纪念称号编号为0或1；不要求赢下该场。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cf098
+V7,commemorative,1002,,バレンタイン,GF/DM,服务端player/kikan_event活动位0x80开启，且本轮有效stage出现musicid 709（不要求CLEAR）；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf104
+V7,commemorative,1003,,七夕,GF/DM,服务端player/kikan_event活动位0x2开启，且本轮有效stage出现musicid 823（不要求CLEAR）；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf170
+V7,commemorative,1004,,暑中お見舞い,GF/DM,服务端player/kikan_event活动位0x4开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf1dc
+V7,commemorative,1005,,HAPPY HALLOWEEN,GF/DM,服务端player/kikan_event活动位0x8开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf248
+V7,commemorative,1006,,おつかれさま,GF/DM,服务端player/kikan_event活动位0x10开启，且本轮有效stage出现musicid 1108（不要求CLEAR）；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf2b4
+V7,commemorative,1007,,Merry Xmas,GF/DM,服务端player/kikan_event活动位0x20开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf320
+V7,commemorative,1008,,Welcome !,GF/DM,服务端player/kikan_event活动位0x1开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x10025570 → 0x100275E0；libshare-pj.dll 0x10019170(kikan_event)；表行 0x100cf38c
+V7,commemorative,1009,,SPECIAL THANKS,GF/DM,BATTLE遇到对手打包标志含0x200000的工作人员；不要求赢下该场。,程序判定,,game.dll 0x10025570 → 0x10026FB0；表行 0x100cf3f8
+V7,commemorative,1010,,TITLE COMPLETED,GF/DM,取得本版按GF/DM适用模式过滤后的全部普通称号；不要求收集全部纪念称号。,程序判定,,game.dll 0x10025570 → 0x10025840 → 0x1002E670（v7-0x100258da.c）；表行 0x100cf464
+V7,commemorative,1011,,XG,GF/DM,服务端返回的XG联动统计非0；客户端不另判定具体游玩内容。,字段判定，服务端联动规则未闭合,,game.dll 0x10025570 → 0x100275E0；表行 0x100cf4d0
+V7,commemorative,1012,,トップランカー2008ファイナリスト,GF/DM,服务端冠军附加统计字节的bit值0x1置位。本版新授予/结果列表只处理纪念0..11，1012/1013保留为历史冠军项，新授予列表不处理。,历史保留项，新授予列表不处理,,game.dll 0x10025570 → 0x100275E0；表行 0x100cf53c
+V7,commemorative,1013,,トップランカー2008優勝者,GF/DM,服务端冠军附加统计字节的bit值0x2置位。本版新授予/结果列表只处理纪念0..11，1012/1013保留为历史冠军项，新授予列表不处理。,历史保留项，新授予列表不处理,,game.dll 0x10025570 → 0x100275E0；表行 0x100cf5a8
+V8,regular,0,,NEW COMER,GF/DM,使用有效卡游玩并进入称号结算；有效玩家没有额外门槛。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc6b0
+V8,regular,1,,わかば,GF/DM,当局游玩BEGINNER入门模式（模式值0）。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026A70；表行 0x100cc71c
+V8,regular,2,,早起きは三文の得,GF/DM,游玩记录中的小时处于7至9，含端点；活动日期不参与该项判定。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc788
+V8,regular,3,,学校帰り,GF/DM,游玩记录中的小时处于15至16，含端点；活动日期不参与该项判定。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc7f4
+V8,regular,4,,アフターファイブ,GF/DM,游玩记录中的小时处于17至22，含端点；活动日期不参与该项判定。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc860
+V8,regular,5,,千里の道も一歩から,GF/DM,累计游玩次数达到1。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc8cc
+V8,regular,6,,おなじみさん,GF/DM,累计游玩次数达到10。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc938
+V8,regular,7,,常連さん,GF/DM,累计游玩次数达到50。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cc9a4
+V8,regular,8,,ベテラン,GF/DM,累计游玩次数达到100。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cca10
+V8,regular,9,,大御所,GF/DM,累计游玩次数达到500。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100cca7c
+V8,regular,10,,仙人,GF/DM,累计游玩次数达到1000。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100ccae8
+V8,regular,11,,SessionFreaks,GF/DM,累计Session游玩次数达到30。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100ccb54
+V8,regular,12,,バガボンド,GF/DM,在至少3家店铺游玩；服务器返回player/play_shop_num达到3。该字段为整个接收结构+0x166的一字节店铺数。,程序判定,,game.dll 0x100255F0 → libshare-pj.dll 0x10019290(play_shop_num) → game.dll 0x1002D380 → 0x10025490 → 0x10026A70；表行 0x100ccbc0
+V8,regular,13,,切磋琢磨,GF/DM,已注册至少一名RIVAL；RIVAL数据存在非空项。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100ccc2c
+V8,regular,14,,好敵手,GF/DM,被其他玩家注册为RIVAL；对应服务端统计非0。,程序判定,,game.dll 0x100255F0 → 0x10026A70；表行 0x100ccc98
+V8,regular,15,,Guitarist,GF,Guitar乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100ccd04
+V8,regular,16,,Bassist,GF,Bass乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100ccd70
+V8,regular,17,,Openpicker,GF,Open乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100ccddc
+V8,regular,18,,Drummer,DM,Drum乐器累计通关至少300首不同歌曲；按曲去重，不按难度谱面张数计算。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100cce48
+V8,regular,19,,EXC ACHIEVER,GF/DM,本轮至少一次EXCELLENT。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100cceb4
+V8,regular,20,,EXC EXPERT,GF/DM,本轮至少一次EXCELLENT，谱面难度达到40。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100ccf20
+V8,regular,21,,EXC MASTER,GF/DM,本轮至少一次EXCELLENT，谱面难度达到80。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100ccf8c
+V8,regular,22,,FC ACHIEVER,GF/DM,本轮至少一次FULL COMBO；EXCELLENT也计入。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100ccff8
+V8,regular,23,,FC EXPERT,GF/DM,本轮至少一次FULL COMBO，谱面难度达到50；EXCELLENT也计入。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100cd064
+V8,regular,24,,FC MASTER,GF/DM,本轮至少一次FULL COMBO，谱面难度达到90；EXCELLENT也计入。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100cd0d0
+V8,regular,25,,Headliner,GF/DM,本轮通关本版PREMIUM ENCORE曲（musicid 1814）。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026E00；表行 0x100cd13c
+V8,regular,26,,小覇王,GF/DM,累计通关通常新曲中的全部有效歌曲；每首任一有效乐器/难度有CLEAR即可，新曲依mdbe新曲位及过滤器确定。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100cd1a8
+V8,regular,27,,覇王,GF/DM,累计通关通常曲库的全部有效歌曲；每首任一有效乐器/难度有CLEAR即可。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100cd214
+V8,regular,28,,皇帝,GF/DM,累计通关通常新曲的全部有效谱面；各存在谱面均需CLEAR，无效或难度0谱面跳过。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100cd280
+V8,regular,29,,天帝,GF/DM,累计通关通常曲库的全部有效谱面；各存在谱面均需CLEAR，无效或难度0谱面跳过。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10026E00；表行 0x100cd2ec
+V8,regular,30,,覚醒,GF/DM,本轮使用STEALTH通关至少一次；须通过对应GF/DM的AUTO排除检查。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10027070；表行 0x100cd358
+V8,regular,31,,無想,GF/DM,本轮使用STEALTH通关难度至少50的谱面；须通过对应GF/DM的AUTO排除检查。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10027070；表行 0x100cd3c4
+V8,regular,32,,心眼,GF/DM,本轮使用STEALTH通关难度至少90的谱面；须通过对应GF/DM的AUTO排除检查。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10027070；表行 0x100cd430
+V8,regular,33,,二級,GF/DM,SKILL达到200；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd49c
+V8,regular,34,,一級,GF/DM,SKILL达到400；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd508
+V8,regular,35,,初段,GF/DM,SKILL达到600；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd574
+V8,regular,36,,二段,GF/DM,SKILL达到800；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd5e0
+V8,regular,37,,三段,GF/DM,SKILL达到1000；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd64c
+V8,regular,38,,四段,GF/DM,SKILL达到1100；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd6b8
+V8,regular,39,,五段,GF/DM,SKILL达到1200；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd724
+V8,regular,40,,師範,GF/DM,SKILL达到1300；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd790
+V8,regular,41,,免許皆伝,GF/DM,SKILL达到1400；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd7fc
+V8,regular,42,,極,GF/DM,SKILL达到1500；服务端内部SKILL值先除以100再比较。,程序判定,,game.dll 0x100255F0 → 0x10027150；表行 0x100cd868
+V8,regular,43,,戦闘民族,GF/DM,累计BATTLE对战达到30场；胜、负、平场数相加。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cd8d4
+V8,regular,44,,I'm a loser,GF/DM,累计BATTLE败场达到1。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cd940
+V8,regular,45,,孤軍奮闘,GF/DM,当局为在线BATTLE（模式3），并出现未匹配到对手的标记。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cd9ac
+V8,regular,46,,初勝利,GF/DM,累计BATTLE胜场达到1。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cda18
+V8,regular,47,,豪傑,GF/DM,累计BATTLE胜场达到50。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cda84
+V8,regular,48,,百戦錬磨,GF/DM,累计BATTLE胜场达到100。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdaf0
+V8,regular,49,,獅子奮迅,GF/DM,累计BATTLE胜场达到200。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdb5c
+V8,regular,50,,鬼神,GF/DM,累计BATTLE胜场达到300。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdbc8
+V8,regular,51,,軍神,GF/DM,累计BATTLE胜场达到400。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdc34
+V8,regular,52,,天下人,GF/DM,累计BATTLE胜场达到500。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdca0
+V8,regular,53,,一騎当千,GF/DM,累计BATTLE胜场达到1000。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdd0c
+V8,regular,54,,国士無双,GF/DM,当前BATTLE连胜达到5。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdd78
+V8,regular,55,,天下無双,GF/DM,SS段位连胜10场锁存标记为1；已追到>=10的锁存，计数更上游生产仍待补证。,阈值已核准，上游计数未完全闭合,,game.dll 0x100255F0 → 0x100272D0；V7 0x1007BE20（v7-0x1007c0c5.c）；表行 0x100cdde4
+V8,regular,56,,守護天使,GF/DM,在线BATTLE本轮获胜，且对手进入本场前的连胜数达到4。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cde50
+V8,regular,57,,守護神,GF/DM,在线BATTLE本轮获胜，且对手进入本场前的连胜数达到9。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdebc
+V8,regular,58,,心の友よ,GF/DM,在线BATTLE对手与自身打包属性的低14bit完全相同；这些位对应哪些UI属性尚未闭合，不展开猜测。,位比较已核准，属性含义未闭合,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdf28
+V8,regular,59,,下剋上,GF/DM,BATTLE模式结算时，服务端高手击败统计达到10；“高手”的精确定义尚未追完。,字段阈值已核准，统计定义未闭合,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cdf94
+V8,regular,60,,BATTLE MASTER,GF/DM,BATTLE模式结算时，BATTLE RATING内部值达到140000。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100ce000
+V8,regular,61,,BATTLE KING,GF/DM,BATTLE模式结算时，BATTLE RATING内部值达到151000。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100ce06c
+V8,regular,62,,Soldier,GF/DM,47个日本地域及1个海外类别均有对战（胜负平均可）记录；地域循环的局部栈数组恢复不完整，保留原伪码供复核。,程序循环已核准，数组恢复有限,,game.dll 0x100255F0 → 0x100272D0；表行 0x100ce0d8
+V8,regular,63,,全国制覇,GF/DM,47个日本地域及1个海外类别均有获胜记录；地域循环的局部栈数组恢复不完整，保留原伪码供复核。,程序循环已核准，数组恢复有限,,game.dll 0x100255F0 → 0x100272D0；表行 0x100ce144
+V8,regular,64,,777,GF/DM,本轮RANDOM抽中777（musicid 811）；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce1b0
+V8,regular,65,,Happy man,GF/DM,本轮RANDOM抽中Happy man（musicid 5）；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce21c
+V8,regular,66,,LUCKY? STAFF,GF/DM,本轮RANDOM抽中LUCKY?STAFF（musicid 208）；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce288
+V8,regular,67,,七福神,GF/DM,本轮RANDOM抽中七福神（musicid 1307）；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce2f4
+V8,regular,68,,大凶,GF/DM,本轮RANDOM抽曲记录命中，且本轮选用该曲的有效谱面难度达到99；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce360
+V8,regular,69,,ミラクル,GF/DM,本轮RANDOM抽中MODEL FT2 Miracle Version（musicid 1302）；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce3cc
+V8,regular,70,,奇跡,GF/DM,本轮RANDOM抽中キセキ（musicid 1648）；不要求通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce438
+V8,regular,71,,抽選王,GF/DM,本轮存在RANDOM抽曲记录；不要求抽中特定歌曲或通关。,程序判定,,game.dll 0x100255F0 → 0x10026900 → 0x100279A0；表行 0x100ce4a4
+V8,regular,72,,Snowy Muu,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1800、1801、1802。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1800: I CAN BE / 1801: BLUE MOON / 1802: CHINESE SNOWY D,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce510
+V8,regular,73,,メガネ from KOBE,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1223、1325、1812。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1223: HONGKONG / 1325: MODORANAI KOI / 1812: CHANCE,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce57c
+V8,regular,74,,僕です。,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1506、1603、1704。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1506: A DOGMA / 1603: SONNE / 1704: TENTEI OTOKONOK,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce5e8
+V8,regular,75,,ドコドコ96ミリオン,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1805、1422、1621。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1805: SIX DIMENSION / 1422: ICHIMOUDAJIN / 1621: DEVOLUTION OF T,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce654
+V8,regular,76,,ストストTAGビリオン,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1710、1745、1814。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,"1710: BEFORE DAYBREAK / 1745: 10,000,000,000 / 1814: EXCELSIOR DIVE",game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce6c0
+V8,regular,77,,王子ービーフ,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1808、1810、1809。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1808: PINK BIRD / 1810: DIAMOND ROMANCE / 1809: ADRENALINE,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce72c
+V8,regular,78,,しんせさいざむらい,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1718、1817、1818。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1718: INVINCIBLE / 1817: FU RAI / 1818: SPRING PAIN,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce798
+V8,regular,79,,オレノコスモ,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1010、1705、1824。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1010: MEIKYOSISUI / 1705: EINHERJAR / 1824: COSMIC AGENDA,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce804
+V8,regular,80,,GOLD RUSH,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1313、1404、1853。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1313: EL DORADO / 1404: KOGANEMISAKI / 1853: GOLD,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce870
+V8,regular,81,,月光蝶,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1801、1829、1856。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1801: BLUE MOON / 1829: MURASAKI NO TSU / 1856: BATAFLY KYOSOKY,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce8dc
+V8,regular,82,,Pink Bird,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1708、1819、1808。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1708: KISS ME / 1819: THE YUKI / 1808: PINK BIRD,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ce948
+V8,regular,83,,Blue Moon,GF/DM,历史累计通关musicid 1801、1602、1702、619、806、1502、1748、1652全部8首；每首任一有效乐器/难度CLEAR即可。,程序判定,1801: BLUE MOON / 1602: BLUE EARTH / 1702: BLUE PLANET / 619: CONCERTINO IN B / 806: IMPULSE OF BLUE / 1502: BLUE FOREST / 1748: BLUE FEATHER / 1652: LOST IN BLUE,game.dll 0x100255F0 → 0x10027DF0；v8-blue-moon-songs.json；表行 0x100ce9b4
+V8,regular,84,,TIDAL WAVE,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1132、1830。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1132: DESTRUCTIVE WAV / 1830: BIG WAVE,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100cea20
+V8,regular,85,,野鳥の会,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1639、1808、1858。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1639: BLUE BIRD / 1808: PINK BIRD / 1858: TSUGUMI,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100cea8c
+V8,regular,86,,雷神,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1445、1811。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1445: ENRAI / 1811: GENSORIJINKI,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ceaf8
+V8,regular,87,,風神,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1612、1236、1335。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1612: FUJINUNRYUDEN / 1236: MINAMIKAZE / 1335: AKIKAZE,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ceb64
+V8,regular,88,,竜神,GF/DM,已拥有ID86雷神与ID87風神，并在本轮通关musicid 1817。,程序判定,,game.dll 0x100255F0 → 0x10027BE0；表行 0x100cebd0
+V8,regular,89,,ダイヤモンド王,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 828、1810。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,828: DIAMONDS / 1810: DIAMOND ROMANCE,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100cec3c
+V8,regular,90,,FANTASISTA,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1641、1862。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1641: FANTASISTA / 1862: A FANTASIA,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ceca8
+V8,regular,91,,SA-DA-ME,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 940、603、1855。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,940: SADAME / 603: DESTINY LOVERS / 1855: DESTINY,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ced14
+V8,regular,92,,幸運の女神,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1342、1812。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1342: CHANCE! / 1812: CHANCE,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ced80
+V8,regular,93,,アイドル親衛隊,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1614、750、1849。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1614: JONETSU FUN FUN / 750: SUTAANO KOIBITO / 1849: PONYTAIL AND SH,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100cedec
+V8,regular,94,,人形使い,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1504、1857。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1504: MANNEQUIN / 1857: MUPPET,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100cee58
+V8,regular,95,,GRADUATION,GF/DM,同一轮游玩内通关以下全部歌曲：musicid 1717、1848、1864。检查本轮8个stage的有效且CLEAR记录，不要求固定顺序、指定难度、FC或同一乐器。,程序判定,1717: SAYONARA BOKUJI / 1848: OKURU KOTOBA / 1864: SOTSUGYO,game.dll 0x100255F0 → 0x10027BE0；v8-song-groups.json；表行 0x100ceec4
+V8,regular,96,,天国と地獄,GF/DM,同一曲内曾达到满槽，也曾进入低槽区，最后CLEAR；无先后要求。普通槽上限3000，低槽阈值GF<475、DM<840；Session共享槽边界保留原始状态判定。,程序判定，Session边界保留,,game.dll 0x100255F0 → 0x100464D0 → 0x100471A0 → 0x100434B0 → 0x10043BD0 → 0x100B6DC0 → 0x10025CF0；表行 0x100cef30
+V8,regular,97,,冒険家,GF/DM,本轮至少一次通关且RISKY选项内部值为1；不把该数值扩写成未核准的MISS上限。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026A70；表行 0x100cef9c
+V8,regular,98,,DIE HARD,GF/DM,本轮所有有效stage均启用RISKY（内部值非0），且没有失败触发；排除BEGINNER路径。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026A70；表行 0x100cf008
+V8,regular,99,,Concentration,GF/DM,本轮连续3个有效stage使用同一musicid；该判定不要求这3次全部CLEAR。,程序判定,,game.dll 0x100255F0 → 0x10025CF0 → 0x10026A70；表行 0x100cf074
+V8,regular,100,,繋ぎ屋,GF/DM,历史FULL COMBO歌曲数达到300；每首任一谱面FC即计1首，EXCELLENT也计入。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10027AC0；表行 0x100cf0e0
+V8,regular,101,,神の手,GF/DM,历史EXCELLENT歌曲数GF达到300、DM达到200；每首任一谱面EXCELLENT即计1首。,程序判定,,game.dll 0x100255F0 → 0x10026340 → 0x10027AC0；表行 0x100cf14c
+V8,regular,102,,Master of Meisters,GF/DM,Meister有效标记非0，且4个Meister类别的等级全部为6。,程序判定,,game.dll 0x100255F0 → 0x10027B60；表行 0x100cf1b8
+V8,commemorative,1000,,あけおめ,GF/DM,服务端player/kikan_event活动位0x40开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf224
+V8,commemorative,1001,,ことよろ,GF/DM,BATTLE遇到对手：对手打包数据含0x80000有效位，且纪念称号编号为0或1；不要求赢下该场。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cf290
+V8,commemorative,1002,,バレンタイン,GF/DM,服务端player/kikan_event活动位0x80开启，且本轮有效stage出现musicid 709（不要求CLEAR）；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf2fc
+V8,commemorative,1003,,桃の節句,GF/DM,服务端player/kikan_event活动位0x100开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf368
+V8,commemorative,1004,,花よりギタドラ,GF/DM,服务端player/kikan_event活动位0x200开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf3d4
+V8,commemorative,1005,,端午の節句,GF/DM,服务端player/kikan_event活动位0x400开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf440
+V8,commemorative,1006,,雨にも負けず,GF/DM,服务端player/kikan_event活动位0x800开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf4ac
+V8,commemorative,1007,,七夕,GF/DM,服务端player/kikan_event活动位0x2开启，且本轮有效stage出现musicid 823（不要求CLEAR）；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf518
+V8,commemorative,1008,,暑中お見舞い,GF/DM,服务端player/kikan_event活动位0x4开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf584
+V8,commemorative,1009,,月見団子,GF/DM,服务端player/kikan_event活动位0x1000开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf5f0
+V8,commemorative,1010,,HAPPY HALLOWEEN,GF/DM,服务端player/kikan_event活动位0x8开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf65c
+V8,commemorative,1011,,おつかれさま,GF/DM,服务端player/kikan_event活动位0x10开启，且本轮有效stage出现musicid 1108（不要求CLEAR）；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf6c8
+V8,commemorative,1012,,Merry Xmas,GF/DM,服务端player/kikan_event活动位0x20开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf734
+V8,commemorative,1013,,Welcome!,GF/DM,服务端player/kikan_event活动位0x1开启；客户端不检查固定月日，活动起止日期由服务端决定。,程序判定，活动期依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；libshare-pj.dll 0x10019290(kikan_event)；表行 0x100cf7a0
+V8,commemorative,1014,,SPECIAL THANKS,GF/DM,BATTLE遇到对手打包标志含0x200000的工作人员；不要求赢下该场。,程序判定,,game.dll 0x100255F0 → 0x100272D0；表行 0x100cf80c
+V8,commemorative,1015,,GDP MASTER,GF/DM,内部GDP累计值达到44000。,程序判定,,game.dll 0x100255F0 → 0x10027AC0；表行 0x100cf878
+V8,commemorative,1016,,全称号制覇,GF/DM,取得本版按GF/DM适用模式过滤后的全部普通称号；不要求收集全部纪念称号。,程序判定,,game.dll 0x100255F0 → 0x100258C0 → 0x1002F0B0；表行 0x100cf8e4
+V8,commemorative,1017,,Groove to Live,GF/DM,服务端返回的XG2联动统计非0；客户端不另判定具体游玩内容。,字段判定，服务端联动规则未闭合,,game.dll 0x100255F0 → 0x10027FD0；表行 0x100cf950
+V8,commemorative,1018,,トップランカー2008ファイナリスト,GF/DM,服务端冠军附加统计字节的bit值0x1置位。冠军资格与举办时间由服务端决定。,字段判定，冠军资格依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；表行 0x100cf9bc
+V8,commemorative,1019,,トップランカー2008優勝者,GF/DM,服务端冠军附加统计字节的bit值0x2置位。冠军资格与举办时间由服务端决定。,字段判定，冠军资格依赖服务端,,game.dll 0x100255F0 → 0x10027FD0；表行 0x100cfa28

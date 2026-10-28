@@ -1,0 +1,55 @@
+export const languages = ['ja', 'en', 'zh'];
+export const translations = {
+  zh: {
+    title:'GFDM 称号图鉴',
+    skip:'跳到称号目录',catalog:'称号目录',about:'资料说明',entries:'条称号记录',regular:'普通称号',commemorative:'纪念称号',workbook:'下载条件表',
+    filters:'筛选目录',version:'版本',category:'称号类别',game:'适用机种',review:'判定状态',reset:'重置筛选',all:'全部',allVersions:'全部版本',allCategories:'全部称号',allReviews:'全部状态',
+    scopeNote:'收录历史保留称号；部分条件仍待确认。',browse:'查找你的下一个称号',searchLabel:'搜索称号、条件或曲目',searchPlaceholder:'搜索称号、曲名、条件或 #ID…',loading:'正在载入称号…',
+    sortVersion:'按版本 / 编号',sortNewest:'新版本优先',sortName:'按称号名',sortId:'编号从高到低',resultCount:'找到 {count} 条称号记录',view:'查看详情',
+    emptyTitle:'暂时没有匹配的称号',emptyDescription:'试试更短的关键词，或放宽筛选条件。',clearAll:'清除全部条件',notesTitle:'把条件，查清楚。',
+    notes:'这些条件整理自程序与原始资料。普通称号和纪念称号分别编号；历史保留项不代表当前仍可取得。需要服务器活动开放的称号，以实际活动状态为准。',
+    readNotes:'查看资料说明',updated:'资料更新',confirmed:'程序判定',pending:'待确认',historical:'历史保留',unverified:'机种未确认',
+    requirement:'解禁条件',songs:'指定曲目',officialHint:'官方提示 · 原文',evidence:'判定说明与程序依据',copyLink:'复制称号链接',copied:'称号链接已复制',copyFallback:'请从地址栏复制此称号的链接',
+    previous:'上一页',next:'下一页',page:'第 {number} 页',pageRange:'{start}–{end} / {total} 条',close:'关闭',previousTitle:'上一个称号',nextTitle:'下一个称号',clearSearch:'清空搜索',sort:'排序',
+    aboutIntro:'本图鉴收录 GFDM V4–V8 的 992 条称号记录，包含 583 个普通称号和 409 个纪念/badge ID。',
+    aboutNames:'称号名与官方提示保持原文；语言切换只改变界面、解禁条件及判定说明。',aboutScope:'数据来自静态分析，尚未逐项验证实机取得。少量字段与旧大会条件仍待确认。',
+    aboutHistory:'“历史保留”表示程序仍保留该称号，但未确认当前正常新授予路径。',aboutSongs:'指定曲目使用曲目 ID 与原生短名；部分短名可能截断。',aboutServer:'季节称号依赖服务器活动位，不能仅根据本机日期判断是否可得。',
+    errorTitle:'资料暂时未能载入',errorDescription:'请检查网络连接，然后重新载入。',retry:'重新载入',csvVersion:'版本',csvCategory:'类别',csvName:'称号名（原文）',csvGame:'机种',csvCondition:'解禁条件',csvReview:'判定说明',csvSongs:'指定曲目',badgeIndex:'badge 数组编号',
+  },
+  ja: {
+    title:'GFDM 称号図鑑',
+    skip:'称号一覧へ',catalog:'称号一覧',about:'資料について',entries:'件の称号記録',regular:'通常称号',commemorative:'記念称号',workbook:'条件表をダウンロード',
+    filters:'絞り込み',version:'バージョン',category:'称号の種類',game:'対象機種',review:'確認状況',reset:'絞り込みをリセット',all:'すべて',allVersions:'全バージョン',allCategories:'すべての称号',allReviews:'すべての状況',
+    scopeNote:'過去の保持称号も収録。一部の条件は確認待ちです。',browse:'次の称号を見つけよう',searchLabel:'称号・条件・曲目を検索',searchPlaceholder:'称号、曲名、条件、#IDで検索…',loading:'称号を読み込み中…',
+    sortVersion:'バージョン / 番号順',sortNewest:'新しいバージョン順',sortName:'称号名順',sortId:'番号の降順',resultCount:'{count} 件の称号記録',view:'詳細を見る',
+    emptyTitle:'該当する称号がありません',emptyDescription:'キーワードを短くするか、絞り込み条件を変更してください。',clearAll:'条件をすべてクリア',notesTitle:'条件を、ひとつずつ。',
+    notes:'プログラムと元資料から整理した条件です。通常称号と記念称号は別々の番号を使用します。過去の保持項目は現在も取得可能とは限りません。サーバーイベントに依存する称号は、実際の開催状況に従います。',
+    readNotes:'資料の説明を読む',updated:'資料更新',confirmed:'プログラム判定',pending:'確認待ち',historical:'過去の保持項目',unverified:'対象機種未確認',
+    requirement:'解禁条件',songs:'指定曲目',officialHint:'公式ヒント · 原文',evidence:'判定の説明・プログラムの根拠',copyLink:'称号リンクをコピー',copied:'称号リンクをコピーしました',copyFallback:'アドレスバーから称号リンクをコピーしてください',
+    previous:'前のページ',next:'次のページ',page:'ページ {number}',pageRange:'{start}–{end} / {total} 件',close:'閉じる',previousTitle:'前の称号',nextTitle:'次の称号',clearSearch:'検索をクリア',sort:'並び順',
+    aboutIntro:'GFDM V4–V8の称号記録992件を収録。通常称号583件、記念称号/badge ID 409件を参照できます。',
+    aboutNames:'称号名と公式ヒントは原文を保持。言語切替は画面、解禁条件、判定説明のみを変更します。',aboutScope:'静的解析に基づく資料で、各称号の実機取得は検証していません。一部のフィールドや過去の大会条件は確認待ちです。',
+    aboutHistory:'「過去の保持項目」は、プログラムに称号が残っているものの、現在の通常新規付与経路が未確認の項目です。',aboutSongs:'指定曲目は曲目IDと元の短名で表示。一部の短名は省略されています。',aboutServer:'季節称号はサーバーのイベントビットに依存し、端末の日付だけでは取得可否を判断できません。',
+    errorTitle:'資料を読み込めませんでした',errorDescription:'接続を確認して、もう一度読み込んでください。',retry:'再読み込み',csvVersion:'バージョン',csvCategory:'種類',csvName:'称号名（原文）',csvGame:'機種',csvCondition:'解禁条件',csvReview:'判定説明',csvSongs:'指定曲目',badgeIndex:'badge配列番号',
+  },
+  en: {
+    title:'GFDM Title Archive',
+    skip:'Skip to the collection',catalog:'Collection',about:'About the data',entries:'title records',regular:'Regular titles',commemorative:'Commemorative titles',workbook:'Download workbook',
+    filters:'Filter collection',version:'Version',category:'Title category',game:'Game',review:'Review status',reset:'Reset filters',all:'All',allVersions:'All versions',allCategories:'All titles',allReviews:'All statuses',
+    scopeNote:'Includes historical retained entries. Some requirements await confirmation.',browse:'Find your next title',searchLabel:'Search titles, requirements, or songs',searchPlaceholder:'Search titles, songs, requirements, or #ID…',loading:'Loading the collection…',
+    sortVersion:'Version / ID',sortNewest:'Newest version first',sortName:'Title name',sortId:'Highest ID first',resultCount:'{count} title records found',view:'View details',
+    emptyTitle:'No titles match just yet',emptyDescription:'Try a shorter keyword or broaden your filters.',clearAll:'Clear all filters',notesTitle:'Know what it takes.',
+    notes:'Requirements are compiled from program analysis and original materials. Regular and commemorative titles use separate IDs. Historical entries may no longer be obtainable. Event-dependent titles follow the server’s actual event availability.',
+    readNotes:'Read about the data',updated:'Data updated',confirmed:'Program check',pending:'To be confirmed',historical:'Historical entry',unverified:'Game unverified',
+    requirement:'Unlock requirement',songs:'Required songs',officialHint:'Official hint · original',evidence:'Review notes & program evidence',copyLink:'Copy title link',copied:'Title link copied',copyFallback:'Copy this title’s link from the address bar',
+    previous:'Previous page',next:'Next page',page:'Page {number}',pageRange:'{start}–{end} of {total}',close:'Close',previousTitle:'Previous title',nextTitle:'Next title',clearSearch:'Clear search',sort:'Sort order',
+    aboutIntro:'Explore 992 title records from GFDM V4–V8: 583 regular titles and 409 commemorative/badge IDs.',
+    aboutNames:'Title names and official hints retain their original text. Language switching changes only the interface, requirements, and review notes.',aboutScope:'This is static-analysis data, not verification of each in-game grant. Some fields and historical tournament requirements remain unconfirmed.',
+    aboutHistory:'A “historical entry” remains in the program, but its current normal new-grant path has not been confirmed.',aboutSongs:'Songs are identified by their IDs and native short labels; some labels are truncated.',aboutServer:'Seasonal titles depend on server event bits. The local date alone does not determine availability.',
+    errorTitle:'The collection could not be loaded',errorDescription:'Check your connection, then try loading it again.',retry:'Try again',csvVersion:'Version',csvCategory:'Category',csvName:'Title name (original)',csvGame:'Game',csvCondition:'Unlock requirement',csvReview:'Review notes',csvSongs:'Required songs',badgeIndex:'Badge array index',
+  },
+};
+export function translator(language) {
+  const dictionary = translations[language] ?? translations.zh;
+  return (key, values = {}) => Object.entries(values).reduce((text, [name, value]) => text.replaceAll(`{${name}}`, String(value)), dictionary[key] ?? translations.zh[key] ?? key);
+}

@@ -1,0 +1,13 @@
+{
+  "updated": "2026-10-28",
+  "rows": 992,
+  "regular": 583,
+  "commemorative": 409,
+  "images": 1124,
+  "title_names": "Original names, unchanged across languages.",
+  "files": {
+    "data/titles.json": "d999067a754c061c11f2ec529bbc510c1a0dfcd8868b70d7868fce696d25344e",
+    "downloads/gfdm-titles.csv": "c0ce7bb6cd001293a7fe6591e2450022bdf03d23a230ca6a20c9184e65d40a04",
+    "downloads/gfdm-titles-ja-en-zh.xlsx": "0ebd8bf59b42eef46c8adf4241972f23e9dc2e3a1ebe4aa6a56f6f24287cb1d3"
+  }
+}

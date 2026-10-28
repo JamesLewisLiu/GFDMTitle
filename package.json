@@ -1,0 +1,15 @@
+{
+  "name": "gfdm-title-archive",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A multilingual static GFDM V4–V8 title catalogue",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --dist"
+  },
+  "engines": { "node": ">=20" },
+  "license": "Unlicense"
+}
