@@ -43,9 +43,9 @@ for n,r in enumerate(original,7):
     rows.append(row)
 assert len(rows)==992 and len({r['key'] for r in rows})==992
 payload={'updated':'2026-10-28','languages':['ja','en','zh'],'rows':rows}
-(root/'data/titles.json').write_text(json.dumps(payload,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+(root/'data/titles.json').write_text(json.dumps(payload,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
 with (root/'downloads/gfdm-titles.csv').open('w',encoding='utf-8-sig',newline='') as f:
-    out=csv.writer(f);out.writerow(['版本','类别','ID','badge数组编号','称号名（原文）','机种','解禁条件','核准状态','曲目短名','程序证据'])
+    out=csv.writer(f,lineterminator='\n');out.writerow(['版本','类别','ID','badge数组编号','称号名（原文）','机种','解禁条件','核准状态','曲目短名','程序证据'])
     for r in rows:out.writerow([r['version'],r['kind'],r['id'],r['badgeIndex'],r['name'],r['mode'],r['conditions']['zh'],r['confidence']['zh'],' / '.join(f"{s['id']}: {s['label']}" for s in r['songs']),r['evidence']])
 # Keep the public workbook free of source-transcription diagnostics. Names are
 # the identical original strings in all three languages; only conditions vary.
@@ -74,5 +74,5 @@ book.save(root/'downloads/gfdm-titles-ja-en-zh.xlsx')
 manifest={'updated':payload['updated'],'rows':len(rows),'regular':sum(r['kind']=='regular' for r in rows),'commemorative':sum(r['kind']=='commemorative' for r in rows),
           'images':len(images),'title_names':'Original names, unchanged across languages.',
           'files':{p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in ['data/titles.json','downloads/gfdm-titles.csv','downloads/gfdm-titles-ja-en-zh.xlsx']}}
-(root/'data/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(root/'data/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({k:v for k,v in manifest.items() if k!='files'},ensure_ascii=False))

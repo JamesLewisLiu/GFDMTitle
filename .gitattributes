@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Keep exported text byte-identical on Windows and Linux for SHA256 checks.
+*.json text eol=lf
+*.csv text eol=lf
